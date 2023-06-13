@@ -1,4 +1,4 @@
-# Image data science with Napari and Python - Latin America workshop
+# Image data science with Napari and Python - LatAm workshop
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
@@ -9,7 +9,7 @@ This work is licensed by PLEASE ADD YOUR NAMES Marcelo Leomil Zoccoler, Juan Nun
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
-This repository hosts notebooks, information and data for the "Image data science with Python and Napari" remote workshop in August 2023. @LIBREhub, @LatAm Bioimaging, @Napari 2023
+This repository hosts notebooks, information and data for the "Image data science with Python and Napari" remote Latin America workshop in August 2023. @LIBREhub, @LatAm Bioimaging, @Napari 2023
 
 NEW LINK TO JUPITER BOOK
 
