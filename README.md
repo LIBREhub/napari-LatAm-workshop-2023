@@ -2,7 +2,7 @@
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-This work is licensed by PLEASE ADD YOUR NAMES Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julian Mejia, Adan Guerrero, and Tobias Wenzel under a
+This work is licensed by PLEASE ADD YOUR NAMES Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julian Mejia, Adan O. Guerrero Cardenas, and Tobias Wenzel under a
 [Creative Commons Attribution 4.0 International License][cc-by].
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
