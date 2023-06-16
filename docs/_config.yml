@@ -1,7 +1,7 @@
 # In _config.yml
-title: Image data science with Python and Napari @EPFL
-author: Marcelo Zoccoler, Johannes Müller, Till Korten, Robert Haase, DFG Cluster of Excellence "Physics of Life", TU Dresden
-logo: biapol_logo.png
+title: Image data science with Python and Napari @LIBREhub @LatAm Bioimaging @Napari 2023
+author: Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julian Mejia, Adan O. Guerrero Cardenas, Tobias Wenzel
+logo: LatAmBio_Logo.png
 execute:
   execute_notebooks: off
 
@@ -11,7 +11,7 @@ bibtex_bibfiles:
 
   # Information about where the book exists on the web
 repository:
-  url: https://github.com/BiAPoL/Image-data-science-with-Python-and-Napari-EPFL2022 # Online location of your book
+  url: https://github.com/LIBREhub/Image-data-science-with-Napari-and-Python-LatAm2023 # Online location of your book
   branch: main # Which branch of the repository should be used when creating links (optional)
 
 # Add GitHub buttons to your book

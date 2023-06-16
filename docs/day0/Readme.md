@@ -1,4 +1,13 @@
 # Course preparation
+
+🚧🚧🚧🚧🚧🚧
+
+**TODO:** 
+ - make new installation instructions
+ - add links to python tutorials
+
+🚧🚧🚧🚧🚧🚧
+
 Before attending the course, please install conda on your computer as explained in this [blog post](https://biapol.github.io/blog/johannes_mueller/anaconda_getting_started/). Furthermore, please install [devbio-napari](https://github.com/haesleinhuepf/devbio-napari#installation) and [Github desktop](https://desktop.github.com/).
 
 When you are done, you can test your setup by executing these commands from the command line:
@@ -11,18 +20,6 @@ naparia
 After Napari opens, click the menu `File > Open Samples > clEsperanto > blobs (from ImageJ)`. In the Panel on the right click on the `Label` button. If Napari then looks like this, you are ready to go:
 
 ![img.png](img.png)
-
-## Troubleshooting: Errors in Jupyter lab
-
-In case you installed devbio-napari between approximately December 6st and December 11th, there are error messages appearing in Jupyter lab such as those shown below ([potentially related to this](https://github.com/jupyter-server/jupyter_server/issues/1127)).
-
-![](error_jupyter_server.png)
-
-This can be fixed by calling this from inside the `devbio-napari-env` environment:
-
-```
-mamba install jupyter_server=1.23.3 -c conda-forge
-```
 
 ## Troubleshooting: Napari jumping out of the screen
 
