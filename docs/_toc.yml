@@ -14,9 +14,9 @@ chapters:
   - file: day1/intro_day1
     sections:
 
-      - file: day1/1_Introduction_Bio-image_Analysis/00_intro_introduction_to_napari
+      - file: day1/1_introduction_to_napari/00_intro_introduction_to_napari
       # Optionally add sub-sections here
-      - file: day1/2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks_intro
+      - file: day1/2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks
       # Optionally add sub-sections here
       - file: day1/3_python_introduction/00_intro_python_introduction
         sections:

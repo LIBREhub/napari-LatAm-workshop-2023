@@ -1,4 +1,4 @@
-# Day 1: Introduction to napari
+# Introduction to napari
 
 Welcome to our Image Data Science with Napari and Python for Latin-America course! In the first session we get to know each other and have our first contact with the napari viewer!
 
