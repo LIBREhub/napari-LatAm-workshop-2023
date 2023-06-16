@@ -8,81 +8,73 @@ options: # The options key will be applied to all chapters, but not sub-sections
   numbered: False
 
 chapters:
-  - file: day0/Readme
-  - file: day1/readme
+  # Pre-course preparation instructions
+  - file: day0/readme
+  # Day1
+  - file: day1/intro_day1
     sections:
-      # Day1 Morning Part
-      - file: day1a_Introduction_Bio-image_Analysis/readme
-      - file: day1b_Python_Introduction/readme
-        sections:
-          - file: day1b_Python_Introduction/01_our_first_juptyer_notebook
-          - file: day1b_Python_Introduction/02_Math_in_python
-          - file: day1b_Python_Introduction/03_Dont_try_this_at_home
-          - file: day1b_Python_Introduction/04_Basic_types
-          - file: day1b_Python_Introduction/05_lists_tuples
-          - file: day1b_Python_Introduction/05a_cropping_lists
-          - file: day1b_Python_Introduction/05b_cropping_images
-          - file: day1b_Python_Introduction/05c_sorting_lists
-          - file: day1b_Python_Introduction/05d_masking
-          - file: day1b_Python_Introduction/06_Dictionaries_and_tables
-      # Day1 Afternoon Part
-      - file: day1c_Python_loops_conditions_functions/readme
-        sections:
-          - file: day1c_Python_loops_conditions_functions/07_Conditions
-          - file: day1c_Python_loops_conditions_functions/08_loops
-          - file: day1c_Python_loops_conditions_functions/09_custom_functions
 
-  - file: day2/Readme
+      - file: day1/1_Introduction_Bio-image_Analysis/00_intro_introduction_to_napari
+      # Optionally add sub-sections here
+      - file: day1/2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks_intro
+      # Optionally add sub-sections here
+      - file: day1/3_python_introduction/00_intro_python_introduction
+        sections:
+          - file: day1/3_python_introduction/01_our_first_juptyer_notebook
+          - file: day1/3_python_introduction/02_Math_in_python
+          - file: day1/3_python_introduction/03_Dont_try_this_at_home
+          - file: day1/3_python_introduction/04_Basic_types
+          - file: day1/3_python_introduction/05_lists_tuples
+          - file: day1/3_python_introduction/05a_cropping_lists
+          - file: day1/3_python_introduction/05b_cropping_images
+          - file: day1/3_python_introduction/05c_sorting_lists
+          - file: day1/3_python_introduction/05d_masking
+          - file: day1/3_python_introduction/06_Dictionaries_and_tables
+  # Day2
+  - file: day2/intro_day2
     sections:
-      # Day2 Morning part
-      - file: day2a_File_paths/readme
+
+      - file: day2/1_File_paths/readme
         sections:
-          - file: day2a_File_paths/05_Folder_structures
-          - file: day2a_File_paths/06_EXERCISE_Folder_structures_2
+          - file: day2/1_File_paths/05_Folder_structures
+          - file: day2/1_File_paths/06_EXERCISE_Folder_structures_2
 
-      - file: day2b_Working_with_Images/readme
+      - file: day2/2_Working_with_Images/readme
         sections:
-          - file: day2b_Working_with_Images/napari-assistant.md
-          - file: day2b_Working_with_Images/export_notebooks.md
-          - file: day2b_Working_with_Images/01_Working_with_images
-          - file: day1c_Napari_Introduction/05_napari
-          - file: day2b_Working_with_Images/04_Image_file_formats
+          - file: day2/2_Working_with_Images/napari-assistant.md
+          - file: day2/2_Working_with_Images/export_notebooks.md
+          - file: day2/2_Working_with_Images/01_Working_with_images
+          - file: day1/2_Napari_Introduction/05_napari
+          - file: day2/2_Working_with_Images/04_Image_file_formats
 
-      - file: day2c_Image_Filters/readme
+      - file: day2/3_Image_Filters/readme
         sections:
-          - file: day2c_Image_Filters/09_Filters
-          - file: day2c_Image_Filters/10_Optional_Filters_in_3D_Isotropic_Data
+          - file: day2/3_Image_Filters/09_Filters
+          - file: day2/3_Image_Filters/10_Optional_Filters_in_3D_Isotropic_Data
 
-      - file: day2b_background_subtraction/readme
+      - file: day2/4_image_segmentation/readme
         sections:
-          - file: day2b_background_subtraction/01_Background_subtraction
-          - file: day2b_background_subtraction/01_Background_removal_II
+          - file: day2/4_image_segmentation/01_EXERCISE_Thresholding
+          - file: day2/4_image_segmentation/03_Morphological_operations
+          - file: day2/4_image_segmentation/04_Otsu_threshold
+          - file: day2/4_image_segmentation/09_connected_component_labeling
+          - file: day2/4_image_segmentation/10_touching_objects_labeling
+          - file: day2/4_image_segmentation/11_voronoi_tesselation
+          - file: day2/4_image_segmentation/11_voronoi_otsu_labeling
+          - file: day2/4_image_segmentation/12_Segmentation_3D
+          - file: day2/4_image_segmentation/14_segmentation_2d_membranes
+          - file: day2/4_image_segmentation/15_EXERCISE_Seeded_watershed
+          - file: day2/4_image_segmentation/15_remove_labels_on_image_edges
+          - file: day2/4_image_segmentation/16_open_close_labels
+          - file: day2/4_image_segmentation/19_the_segmentation_game.md
+          - file: day2/4_image_segmentation/20_EXERCISE_Segmentation_quality_estimation
 
-      - file: day2d_image_segmentation/readme
+      - file: day2/5_feature_extraction/readme
         sections:
-          - file: day2d_image_segmentation/01_EXERCISE_Thresholding
-          - file: day2d_image_segmentation/03_Morphological_operations
-          - file: day2d_image_segmentation/04_Otsu_threshold
-          - file: day2d_image_segmentation/09_connected_component_labeling
-          - file: day2d_image_segmentation/10_touching_objects_labeling
-          - file: day2d_image_segmentation/11_voronoi_tesselation
-          - file: day2d_image_segmentation/11_voronoi_otsu_labeling
-          - file: day2d_image_segmentation/12_Segmentation_3D
-          - file: day2d_image_segmentation/14_segmentation_2d_membranes
-          - file: day2d_image_segmentation/15_EXERCISE_Seeded_watershed
-          - file: day2d_image_segmentation/15_remove_labels_on_image_edges
-          - file: day2d_image_segmentation/16_open_close_labels
-          - file: day2d_image_segmentation/19_the_segmentation_game.md
-          - file: day2d_image_segmentation/20_EXERCISE_Segmentation_quality_estimation
-
-      - file: day2f_feature_extraction/readme
-        sections:
-          - file: day2f_feature_extraction/01_EXERCISE_quantiative_measurements
-          - file: day2f_feature_extraction/02_statistics_with_simpleitk
-          - file: day2f_feature_extraction/03_statistics_with_pyclesperanto
-          - file: day2f_feature_extraction/04_EXERCISE_parametric_images_in_napari
-          - file: day2f_feature_extraction/05_quantitative_neighbor_maps
-
-  - file: day3/Readme
-
-  - file: day0/group_projects
+          - file: day2/5_feature_extraction/01_EXERCISE_quantiative_measurements
+          - file: day2/5_feature_extraction/02_statistics_with_simpleitk
+          - file: day2/5_feature_extraction/03_statistics_with_pyclesperanto
+          - file: day2/5_feature_extraction/04_EXERCISE_parametric_images_in_napari
+          - file: day2/5_feature_extraction/05_quantitative_neighbor_maps
+  # Day 3
+  - file: day3/intro_day3

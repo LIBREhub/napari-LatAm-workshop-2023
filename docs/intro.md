@@ -1,4 +1,14 @@
-# Image data science with Python and Napari @EPFL
+# Image data science with Python and Napari @LatAm_Bioimaging
+
+🚧🚧🚧🚧🚧🚧
+
+**TODO:** 
+- update images
+- make timetable
+- update installation instructions depending on environment name
+- update accknoledgements
+
+🚧🚧🚧🚧🚧🚧
 
 This [Jupyter book](https://jupyterbook.org/) contains training resources for scientists who want to dive into image processing with Python. 
 It specifically aims for students and scientists working with microscopy images in the life sciences.
@@ -6,19 +16,14 @@ We presume the attendees have some basic programming and image analysis knowledg
 To get everyone on the same level, we start with Python programming basics.
 We will process images using [numpy](https://numpy.org), [scipy](https://www.scipy.org/), [scikit-image](https://scikit-image.org/), [SimpleITK](https://simpleitk.org/) and [clEsperanto](https://github.com/clEsperanto/pyclesperanto_prototype).
 We will explore [Napari](https://napari.org) for interactive image data analysis and the [Napari-Assistant](https://github.com/haesleinhuepf/napari-assistant) for generating [Jupyter Notebooks](https://jupyterlab.readthedocs.io/en/stable/) from interactively designed image processing workflows. 
-We will use [scikit-learn](https://scikit-learn.org/stable/) to process images using machine learning and deep learning techniques.
-We then dive into working with tables and [matplotlib](https://matplotlib.org/) and [seaborn](https://seaborn.pydata.org/) for plotting results.
-We will use unsupervised machine learning techniques to explore relationships between parameters extracted from biological imaging data. We will use these techniques interactively in the [Napari Clusters Plotter](https://github.com/BiAPoL/napari-clusters-plotter).
-Last but not least we will learn about good scientific practice in the programming context, and sharing code, data and documentation best practices.
-
 
 ## Timetable
 
-![img.png](timetable.png)
+
 
 ## How to use this material
 
-For following the course, we recommend downloading [the repository from which this Jupyter book is made](https://github.com/BiAPoL/Image-data-science-with-Python-and-Napari-EPFL2022).
+For following the course, we recommend downloading [the repository from which this Jupyter book is made](https://github.com/LIBREhub/Image-data-science-with-Napari-and-Python-LatAm2023).
 All Jupyter Notebooks are executable so that attendees can reproduce all demos and exercises.
 
 ![img.png](how_to_download.png)
@@ -26,7 +31,7 @@ All Jupyter Notebooks are executable so that attendees can reproduce all demos a
 Assuming you downloaded the repository to your Desktop, you can open the Jupyter book by opening a terminal and typing:
 
 ```bash
-cd Desktop/Image-data-science-with-Python-and-Napari-EPFL2022
+cd Desktop/Image-data-science-with-Napari-and-Python-LatAm2023
 
 conda activate devbio-napari-env
 
@@ -41,8 +46,8 @@ Using Jupyter lab, you can navigate to the course lessons in the `docs` folder.
 
 ## Feedback and support
 
-If you have any questions, please use the anonymous etherpad (see email) or create a [github issue](https://github.com/BiAPoL/Image-data-science-with-Python-and-Napari-EPFL2022/issues).
-Alternatively, open a thread on [image.sc](https://image.sc), put a link to the lesson or exercise you want to ask a question about and tag @haesleinhuepf.
+If you have any questions, please create a [github issue](https://github.com/BiAPoL/Image-data-science-with-Napari-and-Python-LatAm2023/issues).
+Alternatively, open a thread on [image.sc](https://image.sc).
 
 ## Acknowledgements
 
