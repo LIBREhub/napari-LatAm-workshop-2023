@@ -1,4 +1,4 @@
-# Day 1: Jupyter notebooks and napari
+# Jupyter notebooks and napari
 
 🚧🚧🚧🚧🚧🚧
 
