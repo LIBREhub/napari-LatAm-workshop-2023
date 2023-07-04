@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Cropping lists &#8212; Image data science with Python and Napari @LIBREhub @LatAm Bioimaging @Napari 2023</title>
+    <title>Loops &#8212; Image data science with Python and Napari @LIBREhub @LatAm Bioimaging @Napari 2023</title>
   
   
   
@@ -61,11 +61,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'day1/3_python_introduction/05a_cropping_lists';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'day1/3_python_introduction/08_loops';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Cropping images" href="05b_cropping_images.html" />
-    <link rel="prev" title="Lists and tuples" href="05_lists_tuples.html" />
+    <link rel="next" title="Functions" href="09_custom_functions.html" />
+    <link rel="prev" title="Conditions" href="07_Conditions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -175,7 +175,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">Cropping lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05a_cropping_lists.html">Cropping lists</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05b_cropping_images.html">Cropping images</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05c_sorting_lists.html">Sorting lists</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05d_masking.html">Masking numpy arrays</a></li>
@@ -184,7 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l3"><a class="reference internal" href="07_Conditions.html">Conditions</a></li>
 
-<li class="toctree-l3"><a class="reference internal" href="08_loops.html">Loops</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Loops</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="09_custom_functions.html">Functions</a></li>
 
@@ -325,7 +325,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/LIBREhub/Image-data-science-with-Napari-and-Python-LatAm2023/issues/new?title=Issue%20on%20page%20%2Fday1/3_python_introduction/05a_cropping_lists.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/LIBREhub/Image-data-science-with-Napari-and-Python-LatAm2023/issues/new?title=Issue%20on%20page%20%2Fday1/3_python_introduction/08_loops.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +355,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/day1/3_python_introduction/05a_cropping_lists.ipynb" target="_blank"
+      <li><a href="../../_sources/day1/3_python_introduction/08_loops.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -437,7 +437,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Cropping lists</h1>
+    <h1>Loops</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -447,11 +447,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-ranges-in-lists">Selecting ranges in lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stepping-over-entries-in-lists">Stepping over entries in lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Loops</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-lists-in-loops">Generating lists in loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">While loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interrupting-loops">Interrupting loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skipping-iterations-in-loops">Skipping iterations in loops</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+</ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -462,292 +472,321 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="cropping-lists">
-<h1>Cropping lists<a class="headerlink" href="#cropping-lists" title="Permalink to this heading">#</a></h1>
-<p>A common task in Python is to crop out parts of lists and tuples, for example to access specific parts from lists.</p>
-<p>Let’s start with a list of numbers</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="loops">
+<h1>Loops<a class="headerlink" href="#loops" title="Permalink to this heading">#</a></h1>
+<p>If you want code to be executed repeatedly, you can make use of loops.</p>
+<p>See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=4dN4Cn4u2M0">Python loops Tutorial</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_for_loops.asp">Python for loops</a></p></li>
+</ul>
+<section id="for-loops">
+<h2>For loops<a class="headerlink" href="#for-loops" title="Permalink to this heading">#</a></h2>
+<p>For looping over a range of numbers, we can use a simple <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and the <a class="reference external" href="https://www.w3schools.com/python/ref_func_range.asp">range</a> function.</p>
+<p>In the following cell, the <code class="docutils literal notranslate"><span class="pre">print(i)</span></code> command will be executed a couple of times for different values of <code class="docutils literal notranslate"><span class="pre">i</span></code>. We <strong>i</strong>terate over a range of values:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can determine how many elements are in <code class="docutils literal notranslate"><span class="pre">data</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
 </pre></div>
 </div>
 </div>
 </div>
-<p>As shown earlier, we can access specific elements by passing an index. Counting the element-index starts at 0.</p>
+<p>Note that the above code that is indented will only be excuted for the first given number (0) and continue until the last number (5) but not including it.</p>
+<p>You can also loop over a range of numbers with a defined step, for example step 3:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+3
+6
+9
 </pre></div>
 </div>
 </div>
 </div>
+<p>Iterating over arrays allows you to do something with all array elements:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Dog&quot;</span><span class="p">,</span> <span class="s2">&quot;Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Mouse&quot;</span><span class="p">]:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dog
+Cat
+Mouse
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can also pass negative indices. This will access elements from the end of the list. The last element has index -1.</p>
+<p>You can iterate over two arrays in parallel, pair-wise like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># going through arrays pair-wise</span>
+<span class="n">measurement_1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">measurement_2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">m_1</span><span class="p">,</span> <span class="n">m_2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">measurement_1</span><span class="p">,</span> <span class="n">measurement_2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Paired measurements: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">m_1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; and &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">m_2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Paired measurements: 1 and 4
+Paired measurements: 9 and 5
+Paired measurements: 7 and 5
+Paired measurements: 1 and 7
+Paired measurements: 2 and 4
+Paired measurements: 8 and 5
+Paired measurements: 9 and 4
+Paired measurements: 2 and 6
+Paired measurements: 1 and 6
+Paired measurements: 7 and 5
+Paired measurements: 8 and 4
 </pre></div>
 </div>
 </div>
 </div>
+<p>If you want to know the index of the element in the list as well, use the <a class="reference external" href="https://realpython.com/python-enumerate/">enumerate</a> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># numbering and iterating through collections</span>
+<span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">animal</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s2">&quot;Dog&quot;</span><span class="p">,</span> <span class="s2">&quot;Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Mouse&quot;</span><span class="p">]):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The animal number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; in the list is &quot;</span> <span class="o">+</span> <span class="n">animal</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34
-</pre></div>
-</div>
-</div>
-</div>
-<section id="selecting-ranges-in-lists">
-<h2>Selecting ranges in lists<a class="headerlink" href="#selecting-ranges-in-lists" title="Permalink to this heading">#</a></h2>
-<p>We can also generate a new list that contains the first three elements. Therefore, we pass a range in form <code class="docutils literal notranslate"><span class="pre">[start:end]</span></code>. The first element has index <code class="docutils literal notranslate"><span class="pre">start</span></code> and the last element of the new list will be just before <code class="docutils literal notranslate"><span class="pre">end</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 0, 65, 23, 51, 9, 50, 78, 34, 100]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 0]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 0, 65]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0]
-</pre></div>
-</div>
-</div>
-</div>
-<p>Furthermore, we don’t have to specify either <code class="docutils literal notranslate"><span class="pre">start</span></code> or <code class="docutils literal notranslate"><span class="pre">end</span></code> if we want to select all entries in a list from the start or until the end.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 0, 65, 23, 51, 9, 50, 78, 34, 100]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 0]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 0, 65]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">2</span><span class="p">:]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[65, 23, 51, 9, 50, 78, 34, 100]
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[23, 51, 9, 50, 78, 34, 100]
-</pre></div>
-</div>
-</div>
-</div>
-<p>This also works with negative indices</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The animal number 0 in the list is Dog
+The animal number 1 in the list is Cat
+The animal number 2 in the list is Mouse
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="stepping-over-entries-in-lists">
-<h2>Stepping over entries in lists<a class="headerlink" href="#stepping-over-entries-in-lists" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">:</span></code> can also be used to provide a step length using the syntax <code class="docutils literal notranslate"><span class="pre">[start:end:step]</span></code>.</p>
+<section id="generating-lists-in-loops">
+<h2>Generating lists in loops<a class="headerlink" href="#generating-lists-in-loops" title="Permalink to this heading">#</a></h2>
+<p>One can generate lists using for loops. The conventional way of doing this involves multiple lines of code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we start with an empty list</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># and add elements</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 0, 65, 23, 51, 9, 50, 78, 34, 100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 2, 4, 6, 8]
 </pre></div>
 </div>
 </div>
 </div>
-<p>For example we can select every seceond element starting at the first:</p>
+<p>One can also write that shorter. The underlying concept is called <a class="reference external" href="https://wiki.python.org/moin/Generators">generators</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 65, 51, 50, 34]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 2, 4, 6, 8]
 </pre></div>
 </div>
 </div>
 </div>
+<p>The conventional combination involving an if-statements looks like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># we start with an empty list</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># and add elements</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="c1"># check if the number is odd</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[34, 65, 51, 50, 34]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 6]
 </pre></div>
 </div>
 </div>
 </div>
-<p>We can also start at the second element (index 1):</p>
+<p>And the short version like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 23, 9, 78, 100]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 6]
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="tuples">
-<h2>Tuples<a class="headerlink" href="#tuples" title="Permalink to this heading">#</a></h2>
-<p>All the introduced concepts above also work with tuples</p>
+<section id="while-loops">
+<h2>While loops<a class="headerlink" href="#while-loops" title="Permalink to this heading">#</a></h2>
+<p>Another way of looping is using the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop. It works by checking a condition, similar to the <code class="docutils literal notranslate"><span class="pre">if</span></code> statement. It will interrupt execution as soon as the condition is no longer true:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">immutable_data</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">immutable_data</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">1024</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="n">number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(34, 0, 65, 23, 51, 9, 50, 78, 34, 100)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">immutable_data</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(34, 0, 65, 23, 51)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>512.0
+256.0
+128.0
+64.0
+32.0
+16.0
+8.0
+4.0
+2.0
+1.0
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section id="exercise">
-<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
-<p>Please select the three numbers 23, 9 and 78 from <code class="docutils literal notranslate"><span class="pre">data</span></code> using a single python command similar to the commands shown above.</p>
+<section id="interrupting-loops">
+<h2>Interrupting loops<a class="headerlink" href="#interrupting-loops" title="Permalink to this heading">#</a></h2>
+<p>You can interrupt loops at specific points in your code using the <code class="docutils literal notranslate"><span class="pre">break</span></code> command:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">1024</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">break</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>512.0
+256.0
+128.0
+64.0
+32.0
+16.0
+8.0
+4.0
+2.0
+1.0
+0.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+4
+5
+6
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="skipping-iterations-in-loops">
+<h2>Skipping iterations in loops<a class="headerlink" href="#skipping-iterations-in-loops" title="Permalink to this heading">#</a></h2>
+<p>If you want to skip iterations, you can use the <code class="docutils literal notranslate"><span class="pre">continue</span></code> statement. That often makes sense in combination with an <code class="docutils literal notranslate"><span class="pre">if</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+7
+8
+9
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exercises">
+<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+<section id="exercise-1">
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
+<p>Assume you have a list of filenames and you want to do something with them, for example print them out. Program a for loop which prints out all file names which end with “tif”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;dataset1.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;dataset2.tif&#39;</span><span class="p">,</span> <span class="s1">&#39;summary.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;readme.md&#39;</span><span class="p">,</span> <span class="s1">&#39;blobs.tif&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="exercise-2">
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
+<p>Assume you have a list of circle radii. Make a table (dictionary) with two columns: radius and area.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
@@ -783,20 +822,20 @@ document.write(`
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="05_lists_tuples.html"
+       href="07_Conditions.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Lists and tuples</p>
+        <p class="prev-next-title">Conditions</p>
       </div>
     </a>
     <a class="right-next"
-       href="05b_cropping_images.html"
+       href="09_custom_functions.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cropping images</p>
+        <p class="prev-next-title">Functions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -818,11 +857,21 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-ranges-in-lists">Selecting ranges in lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#stepping-over-entries-in-lists">Stepping over entries in lists</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tuples">Tuples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Loops</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#for-loops">For loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-lists-in-loops">Generating lists in loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#while-loops">While loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interrupting-loops">Interrupting loops</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#skipping-iterations-in-loops">Skipping iterations in loops</a></li>
 </ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1">Exercise 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2">Exercise 2</a></li>
+</ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
