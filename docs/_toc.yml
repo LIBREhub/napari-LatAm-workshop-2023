@@ -30,6 +30,9 @@ chapters:
           - file: day1/3_python_introduction/05c_sorting_lists
           - file: day1/3_python_introduction/05d_masking
           - file: day1/3_python_introduction/06_Dictionaries_and_tables
+          - file: day1/3_python_introduction/07_Conditions
+          - file: day1/3_python_introduction/08_loops
+          - file: day1/3_python_introduction/09_custom_functions
   # Day2
   - file: day2/intro_day2
     sections:
