@@ -4,7 +4,7 @@ Welcome to our Image Data Science with Napari and Python for Latin-America cours
 
 🚧🚧🚧🚧🚧🚧
 
-**TODO:** 
+**TODO:**
  - Update text below, if necessary
  - Add a pdf with the presentation slides to this folder
  - Update the broken link below to the new pdf
