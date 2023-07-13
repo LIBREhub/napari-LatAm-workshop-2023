@@ -51,9 +51,9 @@ You might need to install [git](https://git-scm.com/book/en/v2/Getting-Started-I
 
 Alternatively you can install the plugin graphically:
 
-<object data="https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf" type="application/pdf" width="1200px" height="700px">
-    <embed src="https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="napari-superres/napari-superres_installation_guide.pdf">Download PDF</a>.</p>
+<object data="https://raw.githubusercontent.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf" type="application/pdf" width="1200px" height="700px">
+    <embed src="https://raw.githubusercontent.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
@@ -78,11 +78,11 @@ Examples of use:
 
 | **Original**  | **SRRF** |
 | --- | --- |
-|<p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/main/docs/synt.png" width=50% height=50%> </p> | <p align="center"> <img src="https://github.com/RoccoDAnt/napari-superres/blob/main/docs/SRRF.png" width=50% height=50%> </p>|
+|<p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/main/docs/synt.png" width=50% height=50%> </p> | <p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/main/docs/SRRF.png" width=50% height=50%> </p>|
 | Parameters: | Amplification: 2, Spatial radius: 5, Symmetry Axis: 6, Start frame: 0, End frame: 48|
 
 | **Original**  | **MUSICAL** |
 | --- | --- |
-| <p align="center"> <img src="https://github.com/RoccoDAnt/napari-superres/blob/main/docs/musical_mean.png" width=70% height=100%> </p> | <p align="center"> <img src="https://github.com/RoccoDAnt/napari-superres/blob/main/docs/MUSICAL-CardioMyoblast_Mitochondria.png" width=70% height=100%> </p>|
+| <p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/blob/main/docs/musical_mean.png" width=70% height=100%> </p> | <p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/blob/main/docs/MUSICAL-CardioMyoblast_Mitochondria.png" width=70% height=100%> </p>|
 | Parameters: | Emission [nm]: 510 NA: 1.4, Mag: 100, Pizel size: 8000, Threshold: -0.5, Alpha: 4, Subpixels per pixel: 20|
 ----------------------------------
