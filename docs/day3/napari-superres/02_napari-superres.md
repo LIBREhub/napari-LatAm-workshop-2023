@@ -34,7 +34,7 @@ Repositories available:
 ----------------------------------
 
 ## Installation
-First install napari viewer:
+First install napari viewer (if you haven't):
 
     conda create -y -n napari-env -c conda-forge python=3.9
     conda activate napari-env
@@ -43,19 +43,15 @@ First install napari viewer:
 For details check: https://napari.org/stable/
 
 
-o install latest development version :
+
+
+You can install the plugin [graphically](https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf).
+
+or install latest development version :
 
     pip install git+https://github.com/RoccoDAnt/napari-superres.git
 
 You might need to install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) first.
-
-Alternatively you can install the plugin graphically:
-
-<object data="https://raw.githubusercontent.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf" type="application/pdf" width="1200px" height="700px">
-    <embed src="https://raw.githubusercontent.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
 
 
 ----------------------------------
@@ -83,6 +79,6 @@ Examples of use:
 
 | **Original**  | **MUSICAL** |
 | --- | --- |
-| <p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/blob/main/docs/musical_mean.png" width=70% height=100%> </p> | <p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/blob/main/docs/MUSICAL-CardioMyoblast_Mitochondria.png" width=70% height=100%> </p>|
+| <p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/main/docs/musical_mean.png" width=70% height=100%> </p> | <p align="center"> <img src="https://raw.githubusercontent.com/RoccoDAnt/napari-superres/main/docs/MUSICAL-CardioMyoblast_Mitochondria.png" width=70% height=100%> </p>|
 | Parameters: | Emission [nm]: 510 NA: 1.4, Mag: 100, Pizel size: 8000, Threshold: -0.5, Alpha: 4, Subpixels per pixel: 20|
 ----------------------------------
