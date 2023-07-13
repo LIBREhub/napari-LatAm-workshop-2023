@@ -29,9 +29,9 @@ You might need to install [git](https://git-scm.com/book/en/v2/Getting-Started-I
 
 Alternatively you can install the plugin graphically:
 
-<object data="napari-superres_installation_guide.pdf" type="application/pdf" width="1200px" height="700px">
-    <embed src="napari-superres_installation_guide.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="napari-superres/napari-superres_installation_guide.pdf">Download PDF</a>.</p>
+<object data="https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf" type="application/pdf" width="1200px" height="700px">
+    <embed src="https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/napari-superres_installation_guide.pdf">Download PDF</a>.</p>
     </embed>
 </object>
 
