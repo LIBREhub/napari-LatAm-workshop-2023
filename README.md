@@ -2,7 +2,7 @@
 
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-This work is licensed by PLEASE ADD YOUR NAMES Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julian Mejia, Adan O. Guerrero Cardenas, and Tobias Wenzel under a
+This work is licensed by PLEASE ADD YOUR NAMES Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrero Cardenas, and Tobias Wenzel under a
 [Creative Commons Attribution 4.0 International License][cc-by].
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
@@ -17,7 +17,6 @@ It is maintained using [Jupyter lab](https://jupyterlab.readthedocs.io/en/stable
 
 ## Acknowledgements
 
-This course is held virtually for Latin American participants in August 2023 and with Spanish and Portuguese language support. It is the result of a collaboration by a number of individuals and CZI funded initiatives driving access to bioimaging research capabilities (initiated by LIBRE hub, supported by LatAm Bioimaging, Mexico Bioimaging, individuals from Napari, and available online material. We would like to thank CZI science for financial support. 
+This course is held virtually for Latin American participants in August 2023 and with Spanish and Portuguese language support. It is the result of a collaboration by a number of individuals and CZI funded initiatives driving access to bioimaging research capabilities (initiated by LIBRE hub, supported by LatAm Bioimaging, Mexico Bioimaging, individuals from Napari, and available online material. We would like to thank CZI science for financial support.
 This work is forked and modified from a EPFL course developed and licensed by Marcelo Leomil Zoccoler, Johannes Richard Müller, Till Korten and Robert Haase, [PoL Dresden](http://physics-of-life.tu-dresden.de/bia) under a
 [Creative Commons Attribution 4.0 International License][cc-by].
-
