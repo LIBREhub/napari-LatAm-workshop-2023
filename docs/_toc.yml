@@ -81,3 +81,5 @@ chapters:
           - file: day2/5_feature_extraction/05_quantitative_neighbor_maps
   # Day 3
   - file: day3/intro_day3
+    sections:
+      - file: day3/napari-superres/02_napari-superres
