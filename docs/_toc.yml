@@ -9,7 +9,7 @@ options: # The options key will be applied to all chapters, but not sub-sections
 
 chapters:
   # Pre-course preparation instructions
-  - file: day0/readme
+  - file: day0/Readme
   - file: day0/pre-requirements/to_be_installed
   # Day1
   - file: day1/intro_day1
