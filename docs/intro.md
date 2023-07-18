@@ -23,7 +23,7 @@ We will explore [Napari](https://napari.org) for interactive image data analysis
 
 ## How to use this material
 
-For following the course, we recommend downloading [the repository from which this Jupyter book is made](https://github.com/LIBREhub/Image-data-science-with-Napari-and-Python-LatAm2023).
+For following the course, we recommend downloading [the repository from which this Jupyter book is made](https://librehub.github.io/napari-LatAm-Workshop-2023).
 All Jupyter Notebooks are executable so that attendees can reproduce all demos and exercises.
 
 ![img.png](how_to_download.png)
@@ -31,7 +31,7 @@ All Jupyter Notebooks are executable so that attendees can reproduce all demos a
 Assuming you downloaded the repository to your Desktop, you can open the Jupyter book by opening a terminal and typing:
 
 ```bash
-cd Desktop/Image-data-science-with-Napari-and-Python-LatAm2023
+cd Desktop/napari-LatAm-Workshop-2023
 
 conda activate devbio-napari-env
 
@@ -46,16 +46,13 @@ Using Jupyter lab, you can navigate to the course lessons in the `docs` folder.
 
 ## Feedback and support
 
-If you have any questions, please create a [github issue](https://github.com/BiAPoL/Image-data-science-with-Napari-and-Python-LatAm2023/issues).
+If you have any questions, please create a [github issue](https://librehub.github.io/napari-LatAm-Workshop-2023/issues).
 Alternatively, open a thread on [image.sc](https://image.sc).
 
 ## Acknowledgements
 
-This course was held virtually at EPFL Lausanne in December 2022. We would like to thank Suliana Manley for the invitation, Edward Andò, Mallory Wittwer, Florian Aymanns for the local support and the EPFL Lausanne for financial support. 
-We would like to thank all the people who shared teaching materials we are reusing here, in particular Anna Poetsch ([Biotec Dresden](https://tu-dresden.de/cmcb/biotec/forschungsgruppen/poetsch)), 
-Benoit Lombardot (MPI-CBG Dresden), Martin Weigert (EPFL Lausanne) and Alexander Krull (U Birmingham).
-We acknowledge support by the Deutsche Forschungsgemeinschaft under Germany’s Excellence Strategy—EXC2068–Cluster of Excellence Physics of Life of TU Dresden.
-
+This course was held virtually at the IIBM, Universidad Católica de Chile in August 2023 as part of the LIBRE hub project. We would like to thank all online contributors and speakers for their support and CZI financial support through the LIBRE hub project. 
+We would like to thank all the people who shared teaching materials we are reusing here, in particular from an [EPFL copurse last year](https://github.com/BiAPoL/Image-data-science-with-Napari-and-Python-LatAm2023).
 
 
 
