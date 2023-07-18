@@ -37,6 +37,7 @@ conda activate devbio-napari-env
 
 jupyter lab
 ```
+If you do not yet have conda or devbio-napari-env installed, first follow the "Course preparation" installation instructions on the next page.
 
 Using Jupyter lab, you can navigate to the course lessons in the `docs` folder.
 ![img.png](jupyterlab.png)
