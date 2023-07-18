@@ -22,13 +22,10 @@ chapters:
       - file: day1/3_python_introduction/00_intro_python_introduction
         sections:
           - file: day1/3_python_introduction/01_our_first_juptyer_notebook
-          - file: day1/3_python_introduction/02_Math_in_python
           - file: day1/3_python_introduction/03_Dont_try_this_at_home
           - file: day1/3_python_introduction/04_Basic_types
           - file: day1/3_python_introduction/05_lists_tuples
-          - file: day1/3_python_introduction/05a_cropping_lists
-          - file: day1/3_python_introduction/05b_cropping_images
-          - file: day1/3_python_introduction/05c_sorting_lists
+          - file: day1/3_python_introduction/05a_indexing
           - file: day1/3_python_introduction/05d_masking
           - file: day1/3_python_introduction/06_Dictionaries_and_tables
           - file: day1/3_python_introduction/07_Conditions
