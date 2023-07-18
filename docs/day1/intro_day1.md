@@ -3,13 +3,12 @@
 🚧🚧🚧🚧🚧🚧
 
 **TODO:** 
- - Update text below, if necessary
- - Add a pdf with the presentation slides to this folder
+
  - Update the link below to the new pdf
 
 🚧🚧🚧🚧🚧🚧
 
-Welcome to our Quantiative Bio-Image Analysis using Python course! In the first session we get to know each other and do a little Python Quiz.
+Welcome to our Quantiative Bio-Image Analysis using Napari course! In the first session we get to know each other and do a little Python Quiz.
 
 [Slides](https://github.com/BiAPoL/Image-data-science-with-Python-and-Napari-EPFL2022/raw/main/docs/day1/Introduction_Course.pdf).
 
