@@ -165,9 +165,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro_python_introduction.html">Introduction to Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_our_first_juptyer_notebook.html">Python code in Jupyter notebooks</a></li>
 
-<li class="toctree-l3"><a class="reference internal" href="02_Math_in_python.html">Basic math in python</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="03_Dont_try_this_at_home.html">Pitfalls when working with Jupyter notebooks</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Basic types in python</a></li>
 
@@ -177,9 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l3"><a class="reference internal" href="05a_cropping_lists.html">Cropping lists</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05b_cropping_images.html">Cropping images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05c_sorting_lists.html">Sorting lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05a_indexing.html">Indexing and Slicing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05d_masking.html">Masking numpy arrays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="06_Dictionaries_and_tables.html">Dictionaries</a></li>
 
@@ -483,7 +478,7 @@ document.write(`
 <p>This is an integer number:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">2023</span>
 </pre></div>
 </div>
 </div>
@@ -546,8 +541,8 @@ document.write(`
 <p>Variables can also hold text. We call them a “string” in this case, and define them by surrounding the value with either single quotes <code class="docutils literal notranslate"><span class="pre">'</span> <span class="pre">'</span></code> or double quotes <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&quot;</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">=</span> <span class="s2">&quot;Robert&quot;</span>
-<span class="n">last_name</span> <span class="o">=</span> <span class="s1">&#39;Haase&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workshop_name</span> <span class="o">=</span> <span class="s2">&quot;napari LatAm Workshop&quot;</span>
+<span class="n">workshop_year</span> <span class="o">=</span> <span class="s1">&#39;2023&#39;</span>
 </pre></div>
 </div>
 </div>
@@ -555,24 +550,24 @@ document.write(`
 <p>Strings can be concatenated using the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">+</span> <span class="n">last_name</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workshop_name</span> <span class="o">+</span> <span class="n">workshop_year</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;RobertHaase&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;napari LatAm Workshop2023&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">last_name</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workshop_name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">workshop_year</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Robert Haase&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;napari LatAm Workshop 2023&#39;
 </pre></div>
 </div>
 </div>
@@ -609,15 +604,15 @@ document.write(`
 <p>When combining variables of numeric types and string types, errors may appear:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">+</span> <span class="n">a</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workshop_name</span> <span class="o">+</span> <span class="n">a</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">Input In [12],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">first_name</span> <span class="o">+</span> <span class="n">a</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">workshop_name</span> <span class="o">+</span> <span class="n">a</span>
 
 <span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
 </pre></div>
@@ -627,12 +622,12 @@ document.write(`
 <p>Those can be prevented by converting the numeric variable to a string type using the <code class="docutils literal notranslate"><span class="pre">str()</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">workshop_name</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Robert5&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;napari LatAm Workshop2023&#39;
 </pre></div>
 </div>
 </div>
@@ -664,7 +659,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2028
 </pre></div>
 </div>
 </div>
@@ -705,7 +700,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;This is an f-string. a&#39;s value is 5. Doubling the value of a gives 10.&quot;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;This is an f-string. a&#39;s value is 2023. Doubling the value of a gives 4046.&quot;
 </pre></div>
 </div>
 </div>
@@ -713,12 +708,12 @@ document.write(`
 <p>As you can see above, f-strings can contain as many variables as needed and curly brackets can contain more than just a variable. We can even execute functions inside them:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;The first_name variable contains </span><span class="si">{</span><span class="n">first_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> r letters.&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sa">f</span><span class="s2">&quot;The workshop_name variable contains </span><span class="si">{</span><span class="n">workshop_name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> r letters.&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The first_name variable contains 2 r letters.&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The workshop_name variable contains 2 r letters.&#39;
 </pre></div>
 </div>
 </div>

@@ -165,9 +165,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro_python_introduction.html">Introduction to Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_our_first_juptyer_notebook.html">Python code in Jupyter notebooks</a></li>
 
-<li class="toctree-l3"><a class="reference internal" href="02_Math_in_python.html">Basic math in python</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="03_Dont_try_this_at_home.html">Pitfalls when working with Jupyter notebooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_Basic_types.html">Basic types in python</a></li>
 
@@ -177,9 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l3"><a class="reference internal" href="05a_cropping_lists.html">Cropping lists</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05b_cropping_images.html">Cropping images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05c_sorting_lists.html">Sorting lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05a_indexing.html">Indexing and Slicing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05d_masking.html">Masking numpy arrays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="06_Dictionaries_and_tables.html">Dictionaries</a></li>
 
@@ -702,7 +697,7 @@ The animal number 2 in the list is Mouse
     <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
     
     <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">break</span><span class="p">;</span>
+        <span class="k">break</span>
 </pre></div>
 </div>
 </div>
@@ -784,12 +779,58 @@ The animal number 2 in the list is Mouse
 </section>
 <section id="exercise-2">
 <h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
-<p>Assume you have a list of circle radii. Make a table (dictionary) with two columns: radius and area.</p>
+<p>Consider the image below. The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop shown splits it into 2 horizontal pieces. Write a second <code class="docutils literal notranslate"><span class="pre">for</span></code> loop inside the one already there that furhter splits each horizontal part into 2 vertical parts, ending up with 4 tiles.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">radii</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.data</span> <span class="kn">import</span> <span class="n">camera</span>
+<span class="kn">from</span> <span class="nn">skimage.io</span> <span class="kn">import</span> <span class="n">imshow</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cameraman_image</span> <span class="o">=</span><span class="n">camera</span><span class="p">()</span>
+
+<span class="n">imshow</span><span class="p">(</span><span class="n">cameraman_image</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">cameraman_image</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(512, 512)
+</pre></div>
+</div>
+<img alt="../../_images/2442a24f41099f6ba0a6a2feaea5d9e332f73884280454205df9738e772c0fd2.png" src="../../_images/2442a24f41099f6ba0a6a2feaea5d9e332f73884280454205df9738e772c0fd2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tile_size</span> <span class="o">=</span> <span class="mi">256</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">cameraman_image</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">tile_size</span><span class="p">):</span>
+
+    
+    <span class="n">tile</span> <span class="o">=</span> <span class="n">cameraman_image</span><span class="p">[</span><span class="n">i</span><span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">tile_size</span><span class="p">,</span> <span class="p">:]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting row index: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ending row index: &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">tile_size</span><span class="p">))</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+    <span class="n">imshow</span><span class="p">(</span><span class="n">tile</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting row index: 0
+Ending row index: 256
+Starting row index: 256
+Ending row index: 512
+</pre></div>
+</div>
+<img alt="../../_images/caabe06706bb70bed888dd900aa910661f6f89d41b2432d164cde7d4fbb2a4ce.png" src="../../_images/caabe06706bb70bed888dd900aa910661f6f89d41b2432d164cde7d4fbb2a4ce.png" />
+<img alt="../../_images/36f32dcb82fd27c7f1e4b51d2df1c71e3b8dec9aa2b4c6ccd14d0cb9629a78fd.png" src="../../_images/36f32dcb82fd27c7f1e4b51d2df1c71e3b8dec9aa2b4c6ccd14d0cb9629a78fd.png" />
 </div>
 </div>
 </section>

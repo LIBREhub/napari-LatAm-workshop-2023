@@ -165,9 +165,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro_python_introduction.html">Introduction to Python</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="01_our_first_juptyer_notebook.html">Python code in Jupyter notebooks</a></li>
 
-<li class="toctree-l3"><a class="reference internal" href="02_Math_in_python.html">Basic math in python</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="03_Dont_try_this_at_home.html">Pitfalls when working with Jupyter notebooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="04_Basic_types.html">Basic types in python</a></li>
 
@@ -177,9 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l3"><a class="reference internal" href="05a_cropping_lists.html">Cropping lists</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05b_cropping_images.html">Cropping images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="05c_sorting_lists.html">Sorting lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05a_indexing.html">Indexing and Slicing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05d_masking.html">Masking numpy arrays</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Dictionaries</a></li>
 
@@ -478,7 +473,7 @@ document.write(`
 <p>You can define dictionary like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">german_english_dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Vorlesung&#39;</span><span class="p">:</span><span class="s1">&#39;Lecture&#39;</span><span class="p">,</span> <span class="s1">&#39;Gleichung&#39;</span><span class="p">:</span><span class="s1">&#39;Equation&#39;</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_metadata_dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x_resolution&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;y_resolution&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;z_resolution&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;voxel_physical_unit&#39;</span><span class="p">:</span> <span class="s1">&#39;um&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
@@ -486,22 +481,27 @@ document.write(`
 <p>For readers convenience, consider writing them like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">german_english_dictionary</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;Vorlesung&#39;</span><span class="p">:</span><span class="s1">&#39;Lecture&#39;</span><span class="p">,</span> 
-    <span class="s1">&#39;Gleichung&#39;</span><span class="p">:</span><span class="s1">&#39;Equation&#39;</span>
-<span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_metadata_dictionary</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;x_resolution&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> 
+    <span class="s1">&#39;y_resolution&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> 
+    <span class="s1">&#39;z_resolution&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="s1">&#39;voxel_physical_unit&#39;</span><span class="p">:</span> <span class="s1">&#39;um&#39;</span>
+    <span class="p">}</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">german_english_dictionary</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_metadata_dictionary</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Vorlesung&#39;: &#39;Lecture&#39;, &#39;Gleichung&#39;: &#39;Equation&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;x_resolution&#39;: 0.25,
+ &#39;y_resolution&#39;: 0.25,
+ &#39;z_resolution&#39;: 1.0,
+ &#39;voxel_physical_unit&#39;: &#39;um&#39;}
 </pre></div>
 </div>
 </div>
@@ -509,12 +509,12 @@ document.write(`
 <p>If you want to access a given entry in the dictionary, you can address it using square brackets and the key:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">german_english_dictionary</span><span class="p">[</span><span class="s1">&#39;Vorlesung&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_metadata_dictionary</span><span class="p">[</span><span class="s1">&#39;x_resolution&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Lecture&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.25
 </pre></div>
 </div>
 </div>
@@ -522,19 +522,23 @@ document.write(`
 <p>You can add elements to the dictionary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">german_english_dictionary</span><span class="p">[</span><span class="s1">&#39;Tag&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Day&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_metadata_dictionary</span><span class="p">[</span><span class="s1">&#39;fps&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">german_english_dictionary</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_metadata_dictionary</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Vorlesung&#39;: &#39;Lecture&#39;, &#39;Gleichung&#39;: &#39;Equation&#39;, &#39;Tag&#39;: &#39;Day&#39;}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;x_resolution&#39;: 0.25,
+ &#39;y_resolution&#39;: 0.25,
+ &#39;z_resolution&#39;: 1.0,
+ &#39;voxel_physical_unit&#39;: &#39;um&#39;,
+ &#39;fps&#39;: 60}
 </pre></div>
 </div>
 </div>
@@ -542,7 +546,7 @@ document.write(`
 <p>You can also retrieve a list of all keys in the dictionary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">german_english_dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">image_metadata_dictionary</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -554,7 +558,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Vorlesung&#39;, &#39;Gleichung&#39;, &#39;Tag&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;x_resolution&#39;, &#39;y_resolution&#39;, &#39;z_resolution&#39;, &#39;voxel_physical_unit&#39;, &#39;fps&#39;]
 </pre></div>
 </div>
 </div>
@@ -566,7 +570,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Gleichung&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;y_resolution&#39;
 </pre></div>
 </div>
 </div>
@@ -647,6 +651,58 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</div>
+<p>You can use the <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> library to better visualize tables (also called dataframes).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">rectangles_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">rectangles</span><span class="p">)</span>
+
+<span class="n">rectangles_table</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>width</th>
+      <th>height</th>
+      <th>area</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5</td>
+      <td>3</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>4</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercise">

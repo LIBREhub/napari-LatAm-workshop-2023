@@ -165,9 +165,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../day1/3_python_introduction/00_intro_python_introduction.html">Introduction to Python</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/01_our_first_juptyer_notebook.html">Python code in Jupyter notebooks</a></li>
 
-<li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/02_Math_in_python.html">Basic math in python</a></li>
-
-
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/03_Dont_try_this_at_home.html">Pitfalls when working with Jupyter notebooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/04_Basic_types.html">Basic types in python</a></li>
 
@@ -177,9 +174,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05a_cropping_lists.html">Cropping lists</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05b_cropping_images.html">Cropping images</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05c_sorting_lists.html">Sorting lists</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05a_indexing.html">Indexing and Slicing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05d_masking.html">Masking numpy arrays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/06_Dictionaries_and_tables.html">Dictionaries</a></li>
 
@@ -455,6 +450,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#car-trunk-folder-structure">Car Trunk “Folder Structure”</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-file-and-folder-paths-in-python">Working with file and folder paths in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-over-files-inside-a-folder">Looping over files inside a folder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
 </ul>
             </nav>
         </div>
@@ -502,14 +498,14 @@ document.write(`
 <p>We feed the data repository relative path to the Path class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_folder1</span> <span class="o">=</span> <span class="s1">&#39;../../data/Folder_Structures/Project1_Car_Trunk&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_folder1</span> <span class="o">=</span> <span class="s1">&#39;../../../data/Folder_Structures/Project1_Car_Trunk&#39;</span>
 <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">data_folder1</span><span class="p">)</span>
 <span class="n">data_path</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;../../data/Folder_Structures/Project1_Car_Trunk&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WindowsPath(&#39;../../../data/Folder_Structures/Project1_Car_Trunk&#39;)
 </pre></div>
 </div>
 </div>
@@ -535,7 +531,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;../../data/Folder_Structures&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WindowsPath(&#39;../../../data/Folder_Structures&#39;)
 </pre></div>
 </div>
 </div>
@@ -549,7 +545,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PosixPath(&#39;../../data/Folder_Structures/Project1_Car_Trunk/subdirectory/file.txt&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WindowsPath(&#39;../../../data/Folder_Structures/Project1_Car_Trunk/subdirectory/file.txt&#39;)
 </pre></div>
 </div>
 </div>
@@ -581,13 +577,13 @@ Does the data path exist? True
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0acd2c223d300ea55d0546797713851e818e5c697d073b7f4091b96ce0f3d2fe.png
-0bf33d3db4282d918ec3da7112d0bf0427d4eafe74b3ee0bb419770eefe8d7d6.png
-0b0d577159f0d6c266f360f7b8dfde46e16fa665138bf577ec3c6f9c70c0cd1e.png
-0a7d30b252359a10fd298b638b90cb9ada3acced4e0c0e5a3692013f432ee4e9.png
-.DS_store.txt
-Readme.txt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>.DS_store.txt
 00ae65c1c6631ae6f2be1a449902976e6eb8483bf6b0740d00530220832c6d3e.png
+0a7d30b252359a10fd298b638b90cb9ada3acced4e0c0e5a3692013f432ee4e9.png
+0acd2c223d300ea55d0546797713851e818e5c697d073b7f4091b96ce0f3d2fe.png
+0b0d577159f0d6c266f360f7b8dfde46e16fa665138bf577ec3c6f9c70c0cd1e.png
+0bf33d3db4282d918ec3da7112d0bf0427d4eafe74b3ee0bb419770eefe8d7d6.png
+Readme.txt
 </pre></div>
 </div>
 </div>
@@ -601,11 +597,11 @@ Readme.txt
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0acd2c223d300ea55d0546797713851e818e5c697d073b7f4091b96ce0f3d2fe.png
-0bf33d3db4282d918ec3da7112d0bf0427d4eafe74b3ee0bb419770eefe8d7d6.png
-0b0d577159f0d6c266f360f7b8dfde46e16fa665138bf577ec3c6f9c70c0cd1e.png
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>00ae65c1c6631ae6f2be1a449902976e6eb8483bf6b0740d00530220832c6d3e.png
 0a7d30b252359a10fd298b638b90cb9ada3acced4e0c0e5a3692013f432ee4e9.png
-00ae65c1c6631ae6f2be1a449902976e6eb8483bf6b0740d00530220832c6d3e.png
+0acd2c223d300ea55d0546797713851e818e5c697d073b7f4091b96ce0f3d2fe.png
+0b0d577159f0d6c266f360f7b8dfde46e16fa665138bf577ec3c6f9c70c0cd1e.png
+0bf33d3db4282d918ec3da7112d0bf0427d4eafe74b3ee0bb419770eefe8d7d6.png
 </pre></div>
 </div>
 </div>
@@ -636,9 +632,14 @@ Readme.txt
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/3e47c36ebce9fd32bfa9e3694ec2c4ebbdcc48f78f5d1b70805d89957a85e041.png" src="../../_images/3e47c36ebce9fd32bfa9e3694ec2c4ebbdcc48f78f5d1b70805d89957a85e041.png" />
+<img alt="../../_images/58fe5b3f5dc840102d9d0da4e8d5300e47d8f87619cc62784a94d57bee8999da.png" src="../../_images/58fe5b3f5dc840102d9d0da4e8d5300e47d8f87619cc62784a94d57bee8999da.png" />
 </div>
 </div>
+</section>
+<section id="exercise">
+<h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
+<p>Rename all the images in the folder with <code class="docutils literal notranslate"><span class="pre">image</span></code> + an increasing number.</p>
+<p><em>Hint: use <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> to get the numbers, create a new path with (<code class="docutils literal notranslate"><span class="pre">path.parent</span></code> <code class="docutils literal notranslate"><span class="pre">/</span></code> new_name + number + file extention) and use <code class="docutils literal notranslate"><span class="pre">path.rename</span></code></em></p>
 </section>
 </section>
 
@@ -712,6 +713,7 @@ Readme.txt
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#car-trunk-folder-structure">Car Trunk “Folder Structure”</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-file-and-folder-paths-in-python">Working with file and folder paths in Python</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#looping-over-files-inside-a-folder">Looping over files inside a folder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
 </ul>
   </nav></div>
 
