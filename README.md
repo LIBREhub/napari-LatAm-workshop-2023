@@ -1,6 +1,6 @@
 # napari LatAm workshop
 
-[![CC BY 4.0][cc-by-shield]][cc-by]
+[![CC BY 4.0][cc-by-shield]][cc-by] [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 This work is licensed by PLEASE ADD YOUR NAMES Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrero Cardenas, and Tobias Wenzel under a
 [Creative Commons Attribution 4.0 International License][cc-by].
