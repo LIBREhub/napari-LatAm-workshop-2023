@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../day0/pre-requirements/to_be_installed.html">Course preparation</a></li>
 
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro_day1.html">Day 1: Introduction to Python and Bio-image Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_napari/00_intro_introduction_to_napari.html">Introduction to napari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_napari/00_intro_introduction_to_napari.html">Introduction to the course</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="00_intro_jupyter_notebooks.html">Jupyter notebooks and napari</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">The Napari Assistant</a></li>
 <li class="toctree-l3"><a class="reference internal" href="export_notebooks.html">Generating Jupyter Notebooks from the Napari Assistant</a></li>
@@ -411,37 +411,37 @@ document.write(`
 napari
 </pre></div>
 </div>
-<p><img alt="" src="../../_images/napari-assistant01.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant011.jpg" /></p>
 <p>The napari window will open. Click on the menu <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Open</span> <span class="pre">Samples</span> <span class="pre">Cells(3D+2Ch)</span></code> to open an example image.</p>
-<p><img alt="" src="../../_images/napari-assistant02.jpg" /></p>
-<p><img alt="" src="../../_images/napari-assistant03.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant021.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant031.jpg" /></p>
 <p>You can explore this dataset by clicking on the <code class="docutils literal notranslate"><span class="pre">2D/3D</span></code> view button.</p>
-<p><img alt="" src="../../_images/napari-assistant04.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant041.jpg" /></p>
 <p>Start the Napari Assistant from the <code class="docutils literal notranslate"><span class="pre">Tools</span> <span class="pre">&gt;</span> <span class="pre">Utilities</span> <span class="pre">&gt;</span> <span class="pre">Assistant</span> <span class="pre">(na)</span></code> menu.</p>
-<p><img alt="" src="../../_images/napari-assistant05.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant051.jpg" /></p>
 <p>Within the <code class="docutils literal notranslate"><span class="pre">Assistant</span></code> panel, click on the <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">noise</span></code> button.</p>
-<p><img alt="" src="../../_images/napari-assistant06.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant061.jpg" /></p>
 <p>Click on the <code class="docutils literal notranslate"><span class="pre">Eye</span></code> buttons in the layer list to hide the original image and show the result of the <code class="docutils literal notranslate"><span class="pre">Remove</span> <span class="pre">noise</span></code> step only.</p>
-<p><img alt="" src="../../_images/napari-assistant07.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant071.jpg" /></p>
 <p>Click on the <code class="docutils literal notranslate"><span class="pre">Binarize</span></code> button in the Assistant panel to add a new step to the workflow that generates a binary image from the current layer.</p>
-<p><img alt="" src="../../_images/napari-assistant08.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant081.jpg" /></p>
 <p>Toggle 2D/3D view and layer visibility to explore the result of the <code class="docutils literal notranslate"><span class="pre">Binarize</span></code> step.</p>
-<p><img alt="" src="../../_images/napari-assistant09.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant091.jpg" /></p>
 <p>After switching back to 2D view, click the <code class="docutils literal notranslate"><span class="pre">Label</span></code> button in the Assistant and choose the operation <code class="docutils literal notranslate"><span class="pre">Connected</span> <span class="pre">component</span> <span class="pre">labeling</span> <span class="pre">(clEsperanto)</span></code>.</p>
-<p><img alt="" src="../../_images/napari-assistant11.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant111.jpg" /></p>
 <p>Select the <code class="docutils literal notranslate"><span class="pre">Result</span> <span class="pre">of</span> <span class="pre">gaussian_blur</span></code> layer in the layer list and modify its <code class="docutils literal notranslate"><span class="pre">sigma</span></code> parameters. You will note that the subsequent steps (Threshold Otsu and Connected Component Labeling) are also updated.</p>
-<p><img alt="" src="../../_images/napari-assistant12.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant121.jpg" /></p>
 <p>Switch to grid view, show all layers using their <code class="docutils literal notranslate"><span class="pre">Eye</span></code> buttons and continue modifying the parameters.</p>
-<p><img alt="" src="../../_images/napari-assistant13.jpg" /></p>
-<p><img alt="" src="../../_images/napari-assistant14.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant131.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant141.jpg" /></p>
 <p>Close all layers except <code class="docutils literal notranslate"><span class="pre">nuclei</span></code> and <code class="docutils literal notranslate"><span class="pre">membrane</span></code>.</p>
-<p><img alt="" src="../../_images/napari-assistant15.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant151.jpg" /></p>
 <p>Turn of Gridview and click again on the <code class="docutils literal notranslate"><span class="pre">Label</span></code> button in the Assistant.</p>
-<p><img alt="" src="../../_images/napari-assistant16.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant161.jpg" /></p>
 <p>This time, do not change the operation but the <code class="docutils literal notranslate"><span class="pre">spot_sigma</span></code> parameter instead.</p>
-<p><img alt="" src="../../_images/napari-assistant17.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant171.jpg" /></p>
 <p>Toggle again to 3D view and inspect the result of this single step.</p>
-<p><img alt="" src="../../_images/napari-assistant18.jpg" /></p>
+<p><img alt="" src="../../_images/napari-assistant181.jpg" /></p>
 </section>
 
     <script type="text/x-thebe-config">

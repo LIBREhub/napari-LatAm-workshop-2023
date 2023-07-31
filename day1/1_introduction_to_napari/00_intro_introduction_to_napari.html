@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Introduction to napari &#8212; Image data science with Python and Napari @LIBREhub @LatAm Bioimaging @Napari 2023</title>
+    <title>Introduction to the course &#8212; Image data science with Python and Napari @LIBREhub @LatAm Bioimaging @Napari 2023</title>
   
   
   
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../../day0/pre-requirements/to_be_installed.html">Course preparation</a></li>
 
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro_day1.html">Day 1: Introduction to Python and Bio-image Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction to napari</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction to the course</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks.html">Jupyter notebooks and napari</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../2_napari_and_jupyter_notebooks/napari-assistant.html">The Napari Assistant</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../2_napari_and_jupyter_notebooks/export_notebooks.html">Generating Jupyter Notebooks from the Napari Assistant</a></li>
@@ -376,7 +376,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -387,11 +389,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Introduction to napari</h1>
+    <h1>Introduction to the course</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-napari">Introduction to Napari</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-instructions">Installation instructions</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -401,18 +415,31 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-napari">
-<h1>Introduction to napari<a class="headerlink" href="#introduction-to-napari" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-the-course">
+<h1>Introduction to the course<a class="headerlink" href="#introduction-to-the-course" title="Permalink to this heading">#</a></h1>
 <p>Welcome to our Image Data Science with Napari and Python for Latin-America course! In the first session we get to know each other and have our first contact with the napari viewer!</p>
-<p>🚧🚧🚧🚧🚧🚧</p>
-<p><strong>TODO:</strong></p>
+<section id="introduction-to-napari">
+<h2>Introduction to Napari<a class="headerlink" href="#introduction-to-napari" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Update text below, if necessary</p></li>
-<li><p>Add a pdf with the presentation slides to this folder</p></li>
-<li><p>Update the broken link below to the new pdf</p></li>
+<li><p><a class="reference external" href="https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day1/1_introduction_to_napari/Introduction_napari.pdf">Slides</a>.</p></li>
 </ul>
-<p>🚧🚧🚧🚧🚧🚧</p>
-<p><a class="reference external" href="https://github.com/BiAPoL/Image-data-science-with-Napari-and-Python-LatAm2023/raw/main/docs/day1/Introduction_Course.pdf">Slides</a>.</p>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="06_napari-assistant.html"><span class="doc std std-doc">Setting up an image processing workflow using the Napari-assistant</span></a></p></li>
+<li><p><a class="reference internal" href="07_notebook_export.html"><span class="doc std std-doc">Exporting a workflow as Jupyter Notebook</span></a></p></li>
+</ul>
+<section id="installation-instructions">
+<h3>Installation instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this heading">#</a></h3>
+<p>In this session, we will work with the <a class="reference external" href="https://github.com/haesleinhuepf/devbio-napari">devbio-napari</a> distribution of napari.</p>
+<p>You can setup a conda/mamba environment like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">devbio</span><span class="o">-</span><span class="n">napari</span><span class="o">-</span><span class="n">env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.9</span> <span class="n">devbio</span><span class="o">-</span><span class="n">napari</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+</pre></div>
+</div>
+<p>If you are new to conda/mamba, consider reading this <a class="reference external" href="https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html">blog post</a> first.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -473,6 +500,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-napari">Introduction to Napari</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-instructions">Installation instructions</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
