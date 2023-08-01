@@ -18,7 +18,7 @@ In this session, we will work with the [devbio-napari](https://github.com/haesle
 You can setup a conda/mamba environment like this:
 
 ```
-mamba create --name devbio-napari-env python=3.9 devbio-napari -c conda-forge
+mamba create --name devbio-napari-env-18 python=3.9 devbio-napari napari==0.4.18 pyqt pyrsistent -c conda-forge
 ```
 
 If you are new to conda/mamba, consider reading this [blog post](https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html) first.
