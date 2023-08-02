@@ -25,3 +25,5 @@ dependencies:
   - pyqt
   - pyrsistent
   - napari-ome-zarr
+  - pip:
+    - referencing
