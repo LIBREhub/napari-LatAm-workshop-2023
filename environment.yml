@@ -1,0 +1,27 @@
+name: napari-latam
+channels:
+  - conda-forge
+  - pytorch
+  - ome
+dependencies:
+  - python=3.10
+  - pip
+  - jupyterlab
+  - jupytext
+  - notebook
+  - matplotlib
+  - scikit-image=0.21.0
+  - jupyter-book=0.15.1
+  - pooch=1.7.0
+  - scikit-learn=1.2.2
+  - ipywidgets=8.0.7
+  - seaborn=0.12.2
+  - napari=0.4.18
+  - cookiecutter
+  - cellpose
+  - napari-animation
+  - affinder
+  - devbio-napari
+  - pyqt
+  - pyrsistent
+  - napari-ome-zarr
