@@ -7,11 +7,9 @@ dependencies:
   - python=3.10
   - pip
   - jupyterlab
-  - jupytext
   - notebook
   - matplotlib
   - scikit-image=0.21.0
-  - jupyter-book=0.15.1
   - pooch=1.7.0
   - scikit-learn=1.2.2
   - ipywidgets=8.0.7
@@ -25,5 +23,4 @@ dependencies:
   - pyqt
   - pyrsistent
   - napari-ome-zarr
-  - pip:
-    - referencing
+  - referencing
