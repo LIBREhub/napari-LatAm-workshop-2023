@@ -3,7 +3,7 @@
 [![CC BY 4.0][cc-by-shield]][cc-by] [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 This work is licensed by PLEASE ADD YOUR NAMES Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrero Cardenas, Tobias Wenzel and Robert Haase under a
-[Creative Commons Attribution 4.0 International License][cc-by].
+[Creative Commons Attribution 4.0 International License][cc-by] unless mentioned otherwise.
 
 [cc-by]: http://creativecommons.org/licenses/by/4.0/
 [cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
