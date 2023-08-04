@@ -17,11 +17,15 @@ Before the course starts, all partcipants are required to have Napari and Jupyte
 
 All following times are in Chilean (Santiago) time. [Look up your related time here](https://timezonewizard.com/tn-75s), so you don't miss anything.
 
-![img.png](Day1and2.png)
+<div>
+<img src="Day1and2.png" width="500"/>
+</div>
 
 On the third and last day, there are showcase seminars of key napari plugins as well as emerging trends to controll your bioimaging hardware with python libraries
 
-![img.png](Day3.png)
+<div>
+<img src="Day3.png" width="500"/>
+</div>
 
 
 ## How to use this material
