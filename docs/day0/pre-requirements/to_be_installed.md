@@ -1,5 +1,12 @@
 # Course preparation
 
+Before the course starts, remember to install Napari and Jupyter - see sections of this page.
+Make use of the [napari chatroom for troubleshooting](https://napari.zulipchat.com/#narrow/stream/393209-napari-latam-workshop-2023/) if you face installation issues.
+
+Napari Installation Guide: https://napari.org/dev/tutorials/fundamentals/installation.html
+
+Jupyter Installation Guide: https://jupyter.org/install
+
 # Managing environments
 
 First, you need to install a tool called an *environment manager* in your
