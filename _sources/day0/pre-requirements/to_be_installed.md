@@ -1,5 +1,12 @@
 # Course preparation
 
+Before the course starts, remember to install Napari and Jupyter - see sections of this page.
+Make use of the [napari chatroom for troubleshooting](https://napari.zulipchat.com/#narrow/stream/393209-napari-latam-workshop-2023/) if you face installation issues.
+
+Napari Installation Guide: https://napari.org/dev/tutorials/fundamentals/installation.html
+
+Jupyter Installation Guide: https://jupyter.org/install
+
 # Prerequisites to be installed
 
 Before attending the course, please install conda on your computer as explained in this [guide](https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html). Furthermore, please install [devbio-napari](https://github.com/haesleinhuepf/devbio-napari#installation) and [Github desktop](https://desktop.github.com/).
