@@ -1,6 +1,6 @@
 # Image data science for with Python and Napari
 
-A first Latin America workshop #LIBREhub @napari #MexicoBioimaging
+A first Latin America workshop #LIBREhub @napari #LABI - Latin America Bioimaging #MexicoBioimaging
 
 This [Jupyter book](https://jupyterbook.org/) contains training resources for scientists who want to dive into image processing with Python and Napari. 
 It specifically aims for scientists and students working with microscopy images in the life sciences.
