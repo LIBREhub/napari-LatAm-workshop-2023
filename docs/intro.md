@@ -13,15 +13,58 @@ We will explore [Napari](https://napari.org) for interactive image data analysis
 Before the course starts, all partcipants are required to have Napari and Jupyter installed, [please see the course preparation page](https://librehub.github.io/napari-LatAm-workshop-2023/day0/pre-requirements/to_be_installed.html) - and make use of the [napari chatroom for troubleshooting](https://napari.zulipchat.com/#narrow/stream/393209-napari-latam-workshop-2023/) if you face installation issues.
 
 
-## Preliminary timetable (subject to adjustments)
+## Timetable (subject to adjustments)
 
 All following times are in Chilean (Santiago) time. [Look up your related time here](https://timezonewizard.com/tn-75s), so you don't miss anything.
 
-![img.png](Day1_and2.png)
+<!-- ![img.png](Day1_and2.png)-->
+
+<style>
+table {width:60%;}
+table, th, td {border: 1px solid black; border-collapse: collapse;}
+th {background-color: #1f497d; color: white;}
+</style>
+
+# Day 1 - Monday the 7th of August 2023
+
+| Time (Chile)     | Activities / Topics | Presenters | Support |
+| -------------    |:-------------:| -----:|-----:|
+| 08.00 – 09.00 | Motivating talk - Napari bioimage analysis | Juan Nunez-Iglesias | – |
+| 09.00 – 10.00 | Welcome and ice-break Session | Tobias Wenzel | Claudia, Pierre |
+| 10.00 – 12.00 | Explain environments <br>Python code in Jupyter notebooks | Talley Lambert | Adan, Marcelo Zoccoler & Peter Sobolewski |
+| Lunch Break | | | |
+| 13.00 – 15.00 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase | Marcelo Zoccoler |
+| 15.00 – 15.30 | ●	Pitfalls when working with Jupyter notebooks <br>●	Basic types in python <br>●	Lists and tuples <br>● Cropping lists <br>● Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas & varios IIBM UC |
+| 16.30 – 17.00 | ●	Masking numpy arrays <br>●	Dictionaries <br>●	Conditions <br>● Loops <br>● Functions | Melissa Weber Mendonça | Adan Guerrero Cardenas & varios IIBM UC |
+
+# Day 2 - Wednesday the 9th of August 2023
+
+| Time (Chile)     | Activities / Topics | Presenters | Support |
+| -------------    |:-------------:| -----:|-----:|
+| 10:30 - 11:00 | Questions from the last day? | Marcelo Zoccoler | Tobias Wenzel, Adan Guerrero Cardenas & varios IIBM UC |
+| 11.00 – 12.00 | Python advanced folder management with loops <br>● Open proprietary file formats | Marcelo Zoccoler | Adan Guerrero Cardenasn & varios IIBM UC |
+| 12.00 – 14.00 | Introduction to Image Analysis (Presentation) | Rocco D'Antuono | – |
+| Lunch Break | | | |
+| 16.00 – 19.00 | napari/Python Training: <br>● Filters (Smoothing, Edge detection) <br>● Segmentation, Thresholding, Labelling and Measurement | Juan Nunez-Iglesias | Adan Guerrero Cardenas, Daniel Althviz Moré |
+
 
 On the third and last day, there are showcase seminars of key napari plugins as well as emerging trends to controll your bioimaging hardware with python libraries
 
-![img.png](Day3.png)
+<!-- ![img.png](Day3.png) -->
+
+# Day 3 - Friday the 11th of August 2023 (open to all)
+
+| Time | Activities / Topics | Presenters |
+| ------------- |:-------------:| -----:|
+| 08.00 – 08.20 | Napari Animation | Juan Nunez-Iglesias |
+| 08:20-8:50 | Affinder | Juan Nunez-Iglesias |
+| 08:50 – 9:30 | Napari Clusters Plotter (Unsupervised machine learning) | Marcelo Zoccoler |
+| 09:30 - 10:00 | Break | |
+| 10.10 – 11.00 | Napari Zelda (3D segmentation) | Rocco |
+| 11.00 – 12.00 | Napari Superres (Superresolution) | Julian Mejia |
+| 12:00 - 13:00 | Napari real time processing? | Lucien Hinderling |
+| 13:00 – 14:00 | Lunch Time | |
+| 14:00 - 15:00 | Python libraries for microscope control | Talley Lambert |
 
 
 
@@ -35,9 +78,9 @@ All Jupyter Notebooks are executable so that attendees can reproduce all demos a
 Assuming you downloaded the repository to your Desktop, you can open the Jupyter book by opening a terminal and typing:
 
 ```bash
-cd Desktop/napari-LatAm-Workshop-2023
+cd Desktop/napari-LatAm-workshop-2023
 
-conda activate devbio-napari-env
+micromamba activate devbio-napari-env
 
 jupyter lab
 ```
@@ -51,13 +94,13 @@ Using Jupyter lab, you can navigate to the course lessons in the `docs` folder.
 
 ## Feedback and support
 
-If you have any questions, please create a [github issue](https://librehub.github.io/napari-LatAm-Workshop-2023/issues).
+If you have any questions, please create a [github issue](https://librehub.github.io/napari-LatAm-workshop-2023/issues).
 Alternatively, open a thread on [image.sc](https://image.sc).
 
 ## Acknowledgements
 
-This course was held virtually at the IIBM, Universidad Católica de Chile in August 2023 as part of the LIBRE hub project. We would like to thank all online contributors and speakers for their support and CZI financial support through the LIBRE hub project. 
-We would like to thank all the people who shared teaching materials we are reusing here, in particular from an [EPFL copurse last year](https://github.com/BiAPoL/Image-data-science-with-Napari-and-Python-LatAm2023).
+This course was held virtually at the [Institute for Biological and Medical Engineering, Universidad Católica de Chile](https://ingenieriabiologicaymedica.uc.cl/en/) in August 2023 as part of the [LIBRE hub project](https://librehub.github.io/). We would like to thank all online contributors and speakers for their support and the [Chan Zuckerberg Initiative](https://chanzuckerberg.com/imaging/latin-american-hub-for-bioimaging-through-open-hardware/) for financial support through the [LIBRE hub project](https://librehub.github.io/). 
+We would like to thank all the people who shared teaching materials we are reusing here, in particular from an [EPFL copurse last year](https://github.com/BiAPoL/Image-data-science-with-Napari-and-Python-LatAm2023) and individual contributors including Marcelo Leomil Zoccoler, Tobias Wenzel, Juan Nunez-Iglesias, Rocco D'Antuono, Melissa Weber Mendonça, Talley Lambert, Julián Mejía, Adan O. Guerrero Cardenas, and Robert Haase.
 
 
 

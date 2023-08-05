@@ -1,6 +1,6 @@
 # In _config.yml
-title: Image data science with Python and Napari @LIBREhub @Napari 2023
-author: Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrero Cardenas, Tobias Wenzel
+title: Image data science with Python and Napari @LIBREhub 2023
+author: Marcelo Leomil Zoccoler, Tobias Wenzel, Juan Nunez-Iglesias, Rocco DAntuono, Melissa Weber Mendonça, Talley Lambert, Julián Mejía, Adan O. Guerrero Cardenas, and Robert Haase
 logo: LatAmBio_Logo.png
 execute:
   execute_notebooks: off
