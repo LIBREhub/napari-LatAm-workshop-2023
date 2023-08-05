@@ -20,7 +20,7 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 <style>
 .markdown-table {width:100%;}
 .markdown-table th, .markdown-table td {border: 1px solid black; border-collapse: collapse;}
-.markdown-table th, .special {background-color: #1f497d; color: white;}
+.markdown-table th, .markdown-table .special {background-color: #1f497d; color: white !important;}
 .bullet {font-size: 0.75em;}
 </style>
 
@@ -28,7 +28,7 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 
 <div class="markdown-table">
 
-| Time (Chile)     | Activities / Topics | Presenters | Support |
+| <div class="special">Time (Chile)</div>     | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> | <div class="special">Support</div> |
 | -------------    |:-------------:| -----:|-----:|
 | 08.00 – 09.00 | Motivating talk - Napari bioimage analysis | Juan Nunez-Iglesias | – |
 | 09.00 – 10.00 | Welcome and ice-break Session | Tobias Wenzel | Claudia, Pierre |
@@ -45,7 +45,7 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 
 <div class="markdown-table">
 
-| Time (Chile)     | Activities / Topics | Presenters | Support |
+| <div class="special">Time (Chile)</div>     | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> | <div class="special">Support</div> |
 | -------------    |:-------------:| -----:|-----:|
 | 10:30 - 11:00 | Questions from the last day? | Marcelo Zoccoler | Tobias Wenzel, Adan Guerrero Cardenas & varios IIBM UC |
 | 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | Marcelo Zoccoler | Adan Guerrero Cardenasn & varios IIBM UC |
@@ -64,7 +64,7 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 
 <div class="markdown-table">
 
-| Time | Activities / Topics | Presenters |
+| <div class="special">Time</div> | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> |
 | ------------- |:-------------:| -----:|
 | 08.00 – 08.20 | Napari Animation | Juan Nunez-Iglesias |
 | 08:20-8:50 | Affinder | Juan Nunez-Iglesias |
@@ -75,7 +75,6 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 12:00 - 13:00 | Napari real time processing? | Lucien Hinderling |
 | <div class="special">Lunch Break</div> | | | |
 | 14:00 - 15:00 | Python libraries for microscope control | Talley Lambert |
-| <div class="special">Lunch Break</div> | | | |
 
 </div>
 
