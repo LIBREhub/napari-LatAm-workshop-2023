@@ -10,22 +10,23 @@ We will process images using [numpy](https://numpy.org), [scipy](https://www.sci
 We will explore [Napari](https://napari.org) for interactive image data analysis and the [Napari-Assistant](https://github.com/haesleinhuepf/napari-assistant) for generating [Jupyter Notebooks](https://jupyterlab.readthedocs.io/en/stable/) from interactively designed image processing workflows. 
 
 **Note:** 
-Before the course starts, all partcipants are required to have Napari and Jupyter installed, [please see the course preparation page](https://librehub.github.io/napari-LatAm-workshop-2023/day0/pre-requirements/to_be_installed.html) - and make use of the [napari chatroom for troubleshooting](https://napari.zulipchat.com/#narrow/stream/393209-napari-latam-workshop-2023/) if you face installation issues.
+Before the course starts, all partcipants are required to have Napari and Jupyter installed, [please see the course preparation page](https://librehub.github.io/napari-LatAm-workshop-2023/day0/pre-requirements/to_be_installed.html) - and make use of the [napari chatroom for troubleshooting](https://napari.zulipchat.com/#narrow/stream/393209-napari-latam-workshop-2023/) if you face installation issues. The session on Python environments is further more in the inverted classroom format, so we kindly ask that you familiarise yourself with the [dedicated teaching material on environments](https://hackmd.io/@talley/SJB_lObBi#Python-environments-workshop) before the session in order to simply use the given time for questions.
 
 
 ## Timetable (subject to adjustments)
 
 All following times are in Chilean (Santiago) time. [Look up your related time here](https://timezonewizard.com/tn-75s), so you don't miss anything.
 
-<!-- ![img.png](Day1_and2.png)-->
-
 <style>
-table {width:60%;}
-table, th, td {border: 1px solid black; border-collapse: collapse;}
-th {background-color: #1f497d; color: white;}
+.markdown-table {width:70%;}
+.markdown-table th, .markdown-table td {border: 1px solid black; border-collapse: collapse;}
+.markdown-table th, .special {background-color: #1f497d; color: white;}
+.bullet {font-size: 0.75em;}
 </style>
 
 # Day 1 - Monday the 7th of August 2023
+
+<div class="markdown-table">
 
 | Time (Chile)     | Activities / Topics | Presenters | Support |
 | -------------    |:-------------:| -----:|-----:|
@@ -34,25 +35,34 @@ th {background-color: #1f497d; color: white;}
 | 10.00 – 12.00 | Explain environments <br>Python code in Jupyter notebooks | Talley Lambert | Adan, Marcelo Zoccoler & Peter Sobolewski |
 | Lunch Break | | | |
 | 13.00 – 15.00 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase | Marcelo Zoccoler |
-| 15.00 – 15.30 | ●	Pitfalls when working with Jupyter notebooks <br>●	Basic types in python <br>●	Lists and tuples <br>● Cropping lists <br>● Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas & varios IIBM UC |
-| 16.30 – 17.00 | ●	Masking numpy arrays <br>●	Dictionaries <br>●	Conditions <br>● Loops <br>● Functions | Melissa Weber Mendonça | Adan Guerrero Cardenas & varios IIBM UC |
+| 15.00 – 15.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas & varios IIBM UC |
+| 16.30 – 17.00 | •	Masking numpy arrays <br>•	Dictionaries <br>•	Conditions <br>• Loops <br>• Functions | Melissa Weber Mendonça | Adan Guerrero Cardenas & varios IIBM UC |
+| <div class="special">Lunch Break</div> | | | |
+
+</div>
 
 # Day 2 - Wednesday the 9th of August 2023
+
+<div class="markdown-table">
 
 | Time (Chile)     | Activities / Topics | Presenters | Support |
 | -------------    |:-------------:| -----:|-----:|
 | 10:30 - 11:00 | Questions from the last day? | Marcelo Zoccoler | Tobias Wenzel, Adan Guerrero Cardenas & varios IIBM UC |
-| 11.00 – 12.00 | Python advanced folder management with loops <br>● Open proprietary file formats | Marcelo Zoccoler | Adan Guerrero Cardenasn & varios IIBM UC |
+| 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | Marcelo Zoccoler | Adan Guerrero Cardenasn & varios IIBM UC |
 | 12.00 – 14.00 | Introduction to Image Analysis (Presentation) | Rocco D'Antuono | – |
 | Lunch Break | | | |
-| 16.00 – 19.00 | napari/Python Training: <br>● Filters (Smoothing, Edge detection) <br>● Segmentation, Thresholding, Labelling and Measurement | Juan Nunez-Iglesias | Adan Guerrero Cardenas, Daniel Althviz Moré |
+| 16.00 – 19.00 | napari/Python Training: <br>• Filters (Smoothing, Edge detection) <br>• Segmentation, Thresholding, Labelling and Measurement | Juan Nunez-Iglesias | Adan Guerrero Cardenas, Daniel Althviz Moré |
+| <div class="special">Lunch Break</div> | | | |
 
+</div>
 
 On the third and last day, there are showcase seminars of key napari plugins as well as emerging trends to controll your bioimaging hardware with python libraries
 
 <!-- ![img.png](Day3.png) -->
 
 # Day 3 - Friday the 11th of August 2023 (open to all)
+
+<div class="markdown-table">
 
 | Time | Activities / Topics | Presenters |
 | ------------- |:-------------:| -----:|
@@ -63,9 +73,11 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 10.10 – 11.00 | Napari Zelda (3D segmentation) | Rocco |
 | 11.00 – 12.00 | Napari Superres (Superresolution) | Julian Mejia |
 | 12:00 - 13:00 | Napari real time processing? | Lucien Hinderling |
-| 13:00 – 14:00 | Lunch Time | |
+| Lunch Break | | |
 | 14:00 - 15:00 | Python libraries for microscope control | Talley Lambert |
+| <div class="special">Lunch Break</div> | | | |
 
+</div>
 
 
 ## How to use this material
