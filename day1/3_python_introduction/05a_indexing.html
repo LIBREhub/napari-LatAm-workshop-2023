@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'day1/3_python_introduction/05a_indexing';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Masking numpy arrays" href="05d_masking.html" />
+    <link rel="next" title="Images in python" href="05b_images_are_numpy_arrays.html" />
     <link rel="prev" title="Lists and tuples" href="05_lists_tuples.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -159,6 +159,8 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../day0/pre-requirements/to_be_installed.html">Course preparation</a></li>
 
+
+
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro_day1.html">Day 1: Introduction to Python and Bio-image Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../1_introduction_to_napari/00_intro_introduction_to_napari.html">Introduction to the course</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks.html">Jupyter notebooks and napari</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -179,6 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Indexing and Slicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05b_images_are_numpy_arrays.html">Images in python</a></li>
 <li class="toctree-l3"><a class="reference internal" href="05d_masking.html">Masking numpy arrays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="06_Dictionaries_and_tables.html">Dictionaries</a></li>
 
@@ -403,11 +406,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-selecting-ranges-in-lists">Slicing: selecting ranges in lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-stepping-over-entries-in-lists">Slicing: stepping over entries in lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing-tuples">Indexing and Slicing: Tuples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-in-2d-cropping-images">Slicing in 2D: cropping images</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sub-sampling-images">Sub-sampling images</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flipping-images">Flipping images</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise</a></li>
 </ul>
             </nav>
         </div>
@@ -705,138 +704,12 @@ document.write(`
 </div>
 </div>
 </section>
-<section id="slicing-in-2d-cropping-images">
-<h2>Slicing in 2D: cropping images<a class="headerlink" href="#slicing-in-2d-cropping-images" title="Permalink to this heading">#</a></h2>
-<p>When working with microscopy images, it often makes limited sense to process the whole image. We typically crop out interesting regions and process them in detail.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.io</span> <span class="kn">import</span> <span class="n">imread</span><span class="p">,</span> <span class="n">imshow</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../../data/blobs.tif&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Before we can crop an image, we may want to know its precise shape (dimensions):</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(254, 256)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Recap: Visualization using <code class="docutils literal notranslate"><span class="pre">imshow</span></code>:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x24b4359a220&gt;
-</pre></div>
-</div>
-<img alt="../../_images/eb756dc9532e8cdefa98ec3218709d0b49891bc9b5e8c7da3549af18dfb22404.png" src="../../_images/eb756dc9532e8cdefa98ec3218709d0b49891bc9b5e8c7da3549af18dfb22404.png" />
-</div>
-</div>
-<p>Cropping images works exactly like cropping lists and tuples:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cropped_image1</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">128</span><span class="p">]</span>
-
-<span class="n">imshow</span><span class="p">(</span><span class="n">cropped_image1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x24b435e00d0&gt;
-</pre></div>
-</div>
-<img alt="../../_images/b139fb418412b29b8c8a52a32a48f32c389ddfd6d1bda1654c69ee1f04005828.png" src="../../_images/b139fb418412b29b8c8a52a32a48f32c389ddfd6d1bda1654c69ee1f04005828.png" />
-</div>
-</div>
-<p>To crop the image in the second dimension as well, we add a <code class="docutils literal notranslate"><span class="pre">,</span></code> in the square brackets:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cropped_image2</span> <span class="o">=</span> <span class="n">image</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">:]</span>
-
-<span class="n">imshow</span><span class="p">(</span><span class="n">cropped_image2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x24b4364df10&gt;
-</pre></div>
-</div>
-<img alt="../../_images/694929b2ec48995904fca2ac5af96c8bf3346d84680232445c34814dc92e15cd.png" src="../../_images/694929b2ec48995904fca2ac5af96c8bf3346d84680232445c34814dc92e15cd.png" />
-</div>
-</div>
-</section>
-<section id="sub-sampling-images">
-<h2>Sub-sampling images<a class="headerlink" href="#sub-sampling-images" title="Permalink to this heading">#</a></h2>
-<p>Also step sizes can be specified as if we would process lists and tuples. Technically, we are sub-sampling the image in this case. We sample a subset of the original pixels:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sampled_image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[::</span><span class="mi">5</span><span class="p">,</span> <span class="p">::</span><span class="mi">5</span><span class="p">]</span>
-
-<span class="n">imshow</span><span class="p">(</span><span class="n">sampled_image</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x24b436c5c70&gt;
-</pre></div>
-</div>
-<img alt="../../_images/89cb1ac3d540cbbb14a803d50debafa776b59681cb133f13ee884bce3675b99d.png" src="../../_images/89cb1ac3d540cbbb14a803d50debafa776b59681cb133f13ee884bce3675b99d.png" />
-</div>
-</div>
-</section>
-<section id="flipping-images">
-<h2>Flipping images<a class="headerlink" href="#flipping-images" title="Permalink to this heading">#</a></h2>
-<p>Negative step sizes flip the image.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">flipped_image</span> <span class="o">=</span> <span class="n">image</span><span class="p">[::,</span> <span class="p">::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="n">imshow</span><span class="p">(</span><span class="n">flipped_image</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x24b4479f070&gt;
-</pre></div>
-</div>
-<img alt="../../_images/d168fabd7e6606fed46bef27a67618fc9b86216976ccae68466baf18afa22173.png" src="../../_images/d168fabd7e6606fed46bef27a67618fc9b86216976ccae68466baf18afa22173.png" />
-</div>
-</div>
-</section>
 <section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
 <p>Please select the three numbers 23, 9 and 78 from <code class="docutils literal notranslate"><span class="pre">data</span></code> using a single python command similar to the commands shown above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">51</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="id1">
-<h2>Exercise<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>Open the <code class="docutils literal notranslate"><span class="pre">banana020.tif</span></code> data set (find it in <code class="docutils literal notranslate"><span class="pre">data/banana</span></code> in this repository) and crop out the region where the banana slice is located.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_banana</span> <span class="o">=</span> <span class="n">imread</span><span class="p">(</span><span class="s2">&quot;../../../data/banana/banana0020.tif&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -885,11 +758,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="05d_masking.html"
+       href="05b_images_are_numpy_arrays.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Masking numpy arrays</p>
+        <p class="prev-next-title">Images in python</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -915,11 +788,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-selecting-ranges-in-lists">Slicing: selecting ranges in lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-stepping-over-entries-in-lists">Slicing: stepping over entries in lists</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#indexing-and-slicing-tuples">Indexing and Slicing: Tuples</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#slicing-in-2d-cropping-images">Slicing in 2D: cropping images</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sub-sampling-images">Sub-sampling images</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flipping-images">Flipping images</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise">Exercise</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Exercise</a></li>
 </ul>
   </nav></div>
 
@@ -941,21 +810,20 @@ By Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrer
   
   <div class="footer-item">
     
-  <p class="copyright">
+  </div>
+  
+  <div class="footer-item">
     
-      © Copyright 2022.
-      <br/>
+  </div>
+  
+  <div class="footer-item">
     
-  </p>
+<div class="extra_footer">
+  <p>
+Copyright: This work by Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrero Cardenas, Tobias Wenzel and Robert Haase can be reused under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a> license unless mentioned otherwise.
+</p>
 
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
+</div>
   </div>
   
 </div>

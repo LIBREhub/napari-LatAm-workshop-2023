@@ -7,51 +7,131 @@ Napari Installation Guide: https://napari.org/dev/tutorials/fundamentals/install
 
 Jupyter Installation Guide: https://jupyter.org/install
 
-# Prerequisites to be installed
+# Managing environments
 
-Before attending the course, please install conda on your computer as explained in this [guide](https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html). Furthermore, please install [devbio-napari](https://github.com/haesleinhuepf/devbio-napari#installation) and [Github desktop](https://desktop.github.com/).
+First, you need to install a tool called an *environment manager* in your
+computer. For this course we will use conda or its variants mamba and
+micromamba. If you already have one of those tools, great! Skip to the next
+section. Otherwise, we recommend installing micromamba. Follow the
+instructions for your operating system:
 
-When you are done, you can test your setup by executing these commands from the command line:
-```
-conda activate devbio-napari-env
+## macOS
 
-naparia
-```
-
-After Napari opens, click the menu `File > Open Samples > clEsperanto > blobs (from ImageJ)`. In the Panel on the right click on the `Label` button. If Napari then looks like this, you are ready to go:
-
-![img.png](img.png)
-
-## Troubleshooting: Napari jumping out of the screen
-
-When using some plugins, the Napari window increases and jumps out of the screen. In this case, downgrade Napari to version 0.4.15:
+If you are a macOS user *and* have installed [Homebrew](https://brew.sh/), open
+the Terminal application, and type:
 
 ```
-mamba install napari=0.4.15 -c conda-forge
+brew install micromamba
 ```
 
-## Troubleshooting: DLL load failed
-
-In case of error messages such as this one:
-```
-[...] _get_win_folder_with_pywin32
-from win32com.shell import shellcon, shell
-ImportError: DLL load failed while importing shell: The specified procedure could not be found.
-```
-
-Try this command, within the base environment:
+And press Enter. If you don't have Homebrew, you'll see an error message:
 
 ```
-conda activate base
-
-pip install --upgrade pywin32==228
+zsh: command not found: brew
 ```
 
-[Source](https://github.com/conda/conda/issues/11503)
+If that's the case, copy and paste this command into the Terminal:
 
-## Troubleshooting: Graphics cards drivers
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-In case error messages contains "ImportError: DLL load failed while importing cl: The specified procedure could not be found" [see also](https://github.com/clEsperanto/pyclesperanto_prototype/issues/55) or ""clGetPlatformIDs failed: PLATFORM_NOT_FOUND_KHR", please install recent drivers for your graphics card and/or OpenCL device. Select the right driver source depending on your hardware from this list:
+And follow the prompts. This will install Homebrew. Then you can try `brew
+install micromamba` again.
+
+After you have installed micromamba, you have to configure it.
+
+First, we make sure that micromamba can create and activate environments in
+your Terminal. To do this, type:
+
+```
+micromamba shell init -s zsh -p ~/micromamba
+```
+
+into your shell, then the following:
+
+```
+source ~/.zshrc
+```
+
+Finally, we configure the default *channels*, which is where micromamba looks
+for Python packages to install. Copy the following lines:
+
+```
+channels:
+  - conda-forge
+  - ome
+```
+
+and type the following into your Terminal:
+
+```
+pbpaste > ~/.mambarc
+```
+
+(This creates a file called `.mambarc` in your home directory containing the
+above lines of text, and they tell micromamba to look for packages in two
+places: the conda-forge channel, and, if that fails, the ome channel.)
+
+## Linux
+
+Install micromamba by following the instructions
+[here](https://mamba.readthedocs.io/en/latest/installation.html#linux-and-macos).
+
+## Windows
+
+Open a PowerShell terminal and type the following commands to install and
+configure micromamba for Windows:
+
+```
+Invoke-Webrequest -URI https://micro.mamba.pm/api/micromamba/win-64/latest -OutFile micromamba.tar.bz2
+tar xf micromamba.tar.bz2
+
+MOVE -Force Library\bin\micromamba.exe micromamba.exe
+.\micromamba.exe --help
+
+$Env:MAMBA_ROOT_PREFIX=$HOME\envs
+
+.\micromamba.exe shell init -s powershell -p $HOME\envs
+```
+
+# Creating the environment for this course
+
+We have created an [environment
+file](https://github.com/LIBREhub/napari-LatAm-workshop-2023/blob/main/environment.yml)
+for this course that specifies all the software needed to run the content in
+the course. You can use micromamba to install it.
+
+You will need to [download and
+unzip](https://github.com/LIBREhub/napari-LatAm-workshop-2023/blob/47802d90420a3d4f3d5d4d40c01c9937ea7d1ab9/docs/how_to_download.png)
+this repository. Then, navigate to the root of the repository in your Terminal
+(macOS/Linux) or PowerShell (Windows), and type:
+
+```
+micromamba create -f environment.yml
+```
+
+Follow the prompts, then type:
+
+```
+micromamba activate napari-latam
+napari
+```
+
+After some time (napari takes time to launch the first time), you should see a
+napari window open. You should be able to click the menu `File > Open Samples >
+clEsperanto > blobs (from ImageJ)` and see an image appear.
+
+# Troubleshooting
+
+## Graphics cards drivers
+
+In case error messages contains "ImportError: DLL load failed while importing
+cl: The specified procedure could not be found" [see
+also](https://github.com/clEsperanto/pyclesperanto_prototype/issues/55) or
+""clGetPlatformIDs failed: PLATFORM_NOT_FOUND_KHR", please install recent
+drivers for your graphics card and/or OpenCL device. Select the right driver
+source depending on your hardware from this list:
 
 * [AMD drivers](https://www.amd.com/en/support)
 * [NVidia drivers](https://www.nvidia.com/download/index.aspx)
@@ -61,11 +141,11 @@ In case error messages contains "ImportError: DLL load failed while importing cl
 
 Sometimes, mac-users need to install this:
 
-    mamba install -c conda-forge ocl_icd_wrapper_apple
+    micromamba install -c conda-forge ocl_icd_wrapper_apple
 
 Sometimes, linux users need to install this:
 
-    mamba install -c conda-forge ocl-icd-system
+    micromamba install -c conda-forge ocl-icd-system
 
 In case installation didn't work in the first attempt, you may have to call this command line to reset the napari configuration:
 

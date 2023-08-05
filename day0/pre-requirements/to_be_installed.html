@@ -159,6 +159,8 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Course preparation</a></li>
 
+
+
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../day1/intro_day1.html">Day 1: Introduction to Python and Bio-image Analysis</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../day1/1_introduction_to_napari/00_intro_introduction_to_napari.html">Introduction to the course</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../day1/2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks.html">Jupyter notebooks and napari</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -179,6 +181,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05a_indexing.html">Indexing and Slicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05b_images_are_numpy_arrays.html">Images in python</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05d_masking.html">Masking numpy arrays</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/06_Dictionaries_and_tables.html">Dictionaries</a></li>
 
@@ -400,10 +403,15 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Course preparation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-to-be-installed">Prerequisites to be installed</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting-napari-jumping-out-of-the-screen">Troubleshooting: Napari jumping out of the screen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting-dll-load-failed">Troubleshooting: DLL load failed</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting-graphics-cards-drivers">Troubleshooting: Graphics cards drivers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-environments">Managing environments</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">macOS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-environment-for-this-course">Creating the environment for this course</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphics-cards-drivers">Graphics cards drivers</a></li>
 </ul>
 </li>
 </ul>
@@ -425,43 +433,107 @@ Make use of the <a class="reference external" href="https://napari.zulipchat.com
 <p>Napari Installation Guide: <a class="reference external" href="https://napari.org/dev/tutorials/fundamentals/installation.html">https://napari.org/dev/tutorials/fundamentals/installation.html</a></p>
 <p>Jupyter Installation Guide: <a class="reference external" href="https://jupyter.org/install">https://jupyter.org/install</a></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="prerequisites-to-be-installed">
-<h1>Prerequisites to be installed<a class="headerlink" href="#prerequisites-to-be-installed" title="Permalink to this heading">#</a></h1>
-<p>Before attending the course, please install conda on your computer as explained in this <a class="reference external" href="https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html">guide</a>. Furthermore, please install <a class="reference external" href="https://github.com/haesleinhuepf/devbio-napari#installation">devbio-napari</a> and <a class="reference external" href="https://desktop.github.com/">Github desktop</a>.</p>
-<p>When you are done, you can test your setup by executing these commands from the command line:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">devbio</span><span class="o">-</span><span class="n">napari</span><span class="o">-</span><span class="n">env</span>
-
-<span class="n">naparia</span>
+<section class="tex2jax_ignore mathjax_ignore" id="managing-environments">
+<h1>Managing environments<a class="headerlink" href="#managing-environments" title="Permalink to this heading">#</a></h1>
+<p>First, you need to install a tool called an <em>environment manager</em> in your
+computer. For this course we will use conda or its variants mamba and
+micromamba. If you already have one of those tools, great! Skip to the next
+section. Otherwise, we recommend installing micromamba. Follow the
+instructions for your operating system:</p>
+<section id="macos">
+<h2>macOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h2>
+<p>If you are a macOS user <em>and</em> have installed <a class="reference external" href="https://brew.sh/">Homebrew</a>, open
+the Terminal application, and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">micromamba</span>
 </pre></div>
 </div>
-<p>After Napari opens, click the menu <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Open</span> <span class="pre">Samples</span> <span class="pre">&gt;</span> <span class="pre">clEsperanto</span> <span class="pre">&gt;</span> <span class="pre">blobs</span> <span class="pre">(from</span> <span class="pre">ImageJ)</span></code>. In the Panel on the right click on the <code class="docutils literal notranslate"><span class="pre">Label</span></code> button. If Napari then looks like this, you are ready to go:</p>
-<p><img alt="img.png" src="day0/pre-requirements/img.png" /></p>
-<section id="troubleshooting-napari-jumping-out-of-the-screen">
-<h2>Troubleshooting: Napari jumping out of the screen<a class="headerlink" href="#troubleshooting-napari-jumping-out-of-the-screen" title="Permalink to this heading">#</a></h2>
-<p>When using some plugins, the Napari window increases and jumps out of the screen. In this case, downgrade Napari to version 0.4.15:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">install</span> <span class="n">napari</span><span class="o">=</span><span class="mf">0.4.15</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+<p>And press Enter. If you don’t have Homebrew, you’ll see an error message:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zsh</span><span class="p">:</span> <span class="n">command</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span> <span class="n">brew</span>
+</pre></div>
+</div>
+<p>If that’s the case, copy and paste this command into the Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span>
+</pre></div>
+</div>
+<p>And follow the prompts. This will install Homebrew. Then you can try <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">micromamba</span></code> again.</p>
+<p>After you have installed micromamba, you have to configure it.</p>
+<p>First, we make sure that micromamba can create and activate environments in
+your Terminal. To do this, type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">micromamba</span> <span class="n">shell</span> <span class="n">init</span> <span class="o">-</span><span class="n">s</span> <span class="n">zsh</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/</span><span class="n">micromamba</span>
+</pre></div>
+</div>
+<p>into your shell, then the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</pre></div>
+</div>
+<p>Finally, we configure the default <em>channels</em>, which is where micromamba looks
+for Python packages to install. Copy the following lines:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">channels</span><span class="p">:</span>
+  <span class="o">-</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+  <span class="o">-</span> <span class="n">ome</span>
+</pre></div>
+</div>
+<p>and type the following into your Terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pbpaste</span> <span class="o">&gt;</span> <span class="o">~/.</span><span class="n">mambarc</span>
+</pre></div>
+</div>
+<p>(This creates a file called <code class="docutils literal notranslate"><span class="pre">.mambarc</span></code> in your home directory containing the
+above lines of text, and they tell micromamba to look for packages in two
+places: the conda-forge channel, and, if that fails, the ome channel.)</p>
+</section>
+<section id="linux">
+<h2>Linux<a class="headerlink" href="#linux" title="Permalink to this heading">#</a></h2>
+<p>Install micromamba by following the instructions
+<a class="reference external" href="https://mamba.readthedocs.io/en/latest/installation.html#linux-and-macos">here</a>.</p>
+</section>
+<section id="windows">
+<h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h2>
+<p>Open a PowerShell terminal and type the following commands to install and
+configure micromamba for Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Invoke-Webrequest -URI https://micro.mamba.pm/api/micromamba/win-64/latest -OutFile micromamba.tar.bz2
+tar xf micromamba.tar.bz2
+
+MOVE -Force Library\bin\micromamba.exe micromamba.exe
+.\micromamba.exe --help
+
+$Env:MAMBA_ROOT_PREFIX=$HOME\envs
+
+.\micromamba.exe shell init -s powershell -p $HOME\envs
 </pre></div>
 </div>
 </section>
-<section id="troubleshooting-dll-load-failed">
-<h2>Troubleshooting: DLL load failed<a class="headerlink" href="#troubleshooting-dll-load-failed" title="Permalink to this heading">#</a></h2>
-<p>In case of error messages such as this one:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="n">_get_win_folder_with_pywin32</span>
-<span class="kn">from</span> <span class="nn">win32com.shell</span> <span class="kn">import</span> <span class="n">shellcon</span><span class="p">,</span> <span class="n">shell</span>
-<span class="ne">ImportError</span><span class="p">:</span> <span class="n">DLL</span> <span class="n">load</span> <span class="n">failed</span> <span class="k">while</span> <span class="n">importing</span> <span class="n">shell</span><span class="p">:</span> <span class="n">The</span> <span class="n">specified</span> <span class="n">procedure</span> <span class="n">could</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">found</span><span class="o">.</span>
-</pre></div>
-</div>
-<p>Try this command, within the base environment:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">base</span>
-
-<span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pywin32</span><span class="o">==</span><span class="mi">228</span>
-</pre></div>
-</div>
-<p><a class="reference external" href="https://github.com/conda/conda/issues/11503">Source</a></p>
 </section>
-<section id="troubleshooting-graphics-cards-drivers">
-<h2>Troubleshooting: Graphics cards drivers<a class="headerlink" href="#troubleshooting-graphics-cards-drivers" title="Permalink to this heading">#</a></h2>
-<p>In case error messages contains “ImportError: DLL load failed while importing cl: The specified procedure could not be found” <a class="reference external" href="https://github.com/clEsperanto/pyclesperanto_prototype/issues/55">see also</a> or “”clGetPlatformIDs failed: PLATFORM_NOT_FOUND_KHR”, please install recent drivers for your graphics card and/or OpenCL device. Select the right driver source depending on your hardware from this list:</p>
+<section class="tex2jax_ignore mathjax_ignore" id="creating-the-environment-for-this-course">
+<h1>Creating the environment for this course<a class="headerlink" href="#creating-the-environment-for-this-course" title="Permalink to this heading">#</a></h1>
+<p>We have created an <a class="reference external" href="https://github.com/LIBREhub/napari-LatAm-workshop-2023/blob/main/environment.yml">environment
+file</a>
+for this course that specifies all the software needed to run the content in
+the course. You can use micromamba to install it.</p>
+<p>You will need to <a class="reference external" href="https://github.com/LIBREhub/napari-LatAm-workshop-2023/blob/47802d90420a3d4f3d5d4d40c01c9937ea7d1ab9/docs/how_to_download.png">download and
+unzip</a>
+this repository. Then, navigate to the root of the repository in your Terminal
+(macOS/Linux) or PowerShell (Windows), and type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">micromamba</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>Follow the prompts, then type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">micromamba</span> <span class="n">activate</span> <span class="n">napari</span><span class="o">-</span><span class="n">latam</span>
+<span class="n">napari</span>
+</pre></div>
+</div>
+<p>After some time (napari takes time to launch the first time), you should see a
+napari window open. You should be able to click the menu <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Open</span> <span class="pre">Samples</span> <span class="pre">&gt;</span> <span class="pre">clEsperanto</span> <span class="pre">&gt;</span> <span class="pre">blobs</span> <span class="pre">(from</span> <span class="pre">ImageJ)</span></code> and see an image appear.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="troubleshooting">
+<h1>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">#</a></h1>
+<section id="graphics-cards-drivers">
+<h2>Graphics cards drivers<a class="headerlink" href="#graphics-cards-drivers" title="Permalink to this heading">#</a></h2>
+<p>In case error messages contains “ImportError: DLL load failed while importing
+cl: The specified procedure could not be found” <a class="reference external" href="https://github.com/clEsperanto/pyclesperanto_prototype/issues/55">see
+also</a> or
+“”clGetPlatformIDs failed: PLATFORM_NOT_FOUND_KHR”, please install recent
+drivers for your graphics card and/or OpenCL device. Select the right driver
+source depending on your hardware from this list:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.amd.com/en/support">AMD drivers</a></p></li>
 <li><p><a class="reference external" href="https://www.nvidia.com/download/index.aspx">NVidia drivers</a></p></li>
@@ -470,11 +542,11 @@ Make use of the <a class="reference external" href="https://napari.zulipchat.com
 <li><p><a class="reference external" href="https://www.microsoft.com/en-us/p/opencl-and-opengl-compatibility-pack/9nqpsl29bfff">Microsoft Windows OpenCL support</a></p></li>
 </ul>
 <p>Sometimes, mac-users need to install this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mamba install -c conda-forge ocl_icd_wrapper_apple
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>micromamba install -c conda-forge ocl_icd_wrapper_apple
 </pre></div>
 </div>
 <p>Sometimes, linux users need to install this:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mamba install -c conda-forge ocl-icd-system
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>micromamba install -c conda-forge ocl-icd-system
 </pre></div>
 </div>
 <p>In case installation didn’t work in the first attempt, you may have to call this command line to reset the napari configuration:</p>
@@ -552,10 +624,15 @@ Make use of the <a class="reference external" href="https://napari.zulipchat.com
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Course preparation</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites-to-be-installed">Prerequisites to be installed</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting-napari-jumping-out-of-the-screen">Troubleshooting: Napari jumping out of the screen</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting-dll-load-failed">Troubleshooting: DLL load failed</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting-graphics-cards-drivers">Troubleshooting: Graphics cards drivers</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-environments">Managing environments</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">macOS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-the-environment-for-this-course">Creating the environment for this course</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#graphics-cards-drivers">Graphics cards drivers</a></li>
 </ul>
 </li>
 </ul>
@@ -580,21 +657,20 @@ By Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrer
   
   <div class="footer-item">
     
-  <p class="copyright">
+  </div>
+  
+  <div class="footer-item">
     
-      © Copyright 2022.
-      <br/>
+  </div>
+  
+  <div class="footer-item">
     
-  </p>
+<div class="extra_footer">
+  <p>
+Copyright: This work by Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrero Cardenas, Tobias Wenzel and Robert Haase can be reused under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a> license unless mentioned otherwise.
+</p>
 
-  </div>
-  
-  <div class="footer-item">
-    
-  </div>
-  
-  <div class="footer-item">
-    
+</div>
   </div>
   
 </div>
