@@ -18,7 +18,7 @@ Before the course starts, all partcipants are required to have Napari and Jupyte
 All following times are in Chilean (Santiago) time. [Look up your related time here](https://timezonewizard.com/tn-75s), so you don't miss anything.
 
 <style>
-.markdown-table {width:70%;}
+.markdown-table {width:100%;}
 .markdown-table th, .markdown-table td {border: 1px solid black; border-collapse: collapse;}
 .markdown-table th, .special {background-color: #1f497d; color: white;}
 .bullet {font-size: 0.75em;}
@@ -33,11 +33,11 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 | 08.00 – 09.00 | Motivating talk - Napari bioimage analysis | Juan Nunez-Iglesias | – |
 | 09.00 – 10.00 | Welcome and ice-break Session | Tobias Wenzel | Claudia, Pierre |
 | 10.00 – 12.00 | Explain environments <br>Python code in Jupyter notebooks | Talley Lambert | Adan, Marcelo Zoccoler & Peter Sobolewski |
-| Lunch Break | | | |
+| <div class="special">Lunch Break</div> | | | |
 | 13.00 – 15.00 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase | Marcelo Zoccoler |
 | 15.00 – 15.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas & varios IIBM UC |
 | 16.30 – 17.00 | •	Masking numpy arrays <br>•	Dictionaries <br>•	Conditions <br>• Loops <br>• Functions | Melissa Weber Mendonça | Adan Guerrero Cardenas & varios IIBM UC |
-| <div class="special">Lunch Break</div> | | | |
+
 
 </div>
 
@@ -50,9 +50,9 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 | 10:30 - 11:00 | Questions from the last day? | Marcelo Zoccoler | Tobias Wenzel, Adan Guerrero Cardenas & varios IIBM UC |
 | 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | Marcelo Zoccoler | Adan Guerrero Cardenasn & varios IIBM UC |
 | 12.00 – 14.00 | Introduction to Image Analysis (Presentation) | Rocco D'Antuono | – |
-| Lunch Break | | | |
-| 16.00 – 19.00 | napari/Python Training: <br>• Filters (Smoothing, Edge detection) <br>• Segmentation, Thresholding, Labelling and Measurement | Juan Nunez-Iglesias | Adan Guerrero Cardenas, Daniel Althviz Moré |
 | <div class="special">Lunch Break</div> | | | |
+| 16.00 – 19.00 | napari/Python Training: <br>• Filters (Smoothing, Edge detection) <br>• Segmentation, Thresholding, Labelling and Measurement | Juan Nunez-Iglesias | Adan Guerrero Cardenas, Daniel Althviz Moré |
+
 
 </div>
 
@@ -73,7 +73,7 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 10.10 – 11.00 | Napari Zelda (3D segmentation) | Rocco |
 | 11.00 – 12.00 | Napari Superres (Superresolution) | Julian Mejia |
 | 12:00 - 13:00 | Napari real time processing? | Lucien Hinderling |
-| Lunch Break | | |
+| <div class="special">Lunch Break</div> | | | |
 | 14:00 - 15:00 | Python libraries for microscope control | Talley Lambert |
 | <div class="special">Lunch Break</div> | | | |
 
