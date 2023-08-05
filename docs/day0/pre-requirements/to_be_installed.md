@@ -89,9 +89,9 @@ tar xf micromamba.tar.bz2
 
 MOVE -Force Library\bin\micromamba.exe micromamba.exe
 .\micromamba.exe --help
-```
 
 $Env:MAMBA_ROOT_PREFIX=$HOME\envs
+
 .\micromamba.exe shell init -s powershell -p $HOME\envs
 ```
 
