@@ -21,8 +21,7 @@ html:
   use_repository_button: true
   extra_footer: |
     <p>
-    Copyright: This work by Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrero Cardenas, Tobias Wenzel and Robert Haase can be reused under the terms of the 
-<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a> license unless mentioned otherwise.
+    Copyright: This work by Marcelo Leomil Zoccoler, Juan Nunez-Iglesias, Julián Mejía, Adan O. Guerrero Cardenas, Tobias Wenzel and Robert Haase can be reused under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC-BY 4.0</a> license unless mentioned otherwise.
     </p>
 sphinx:
   config:
