@@ -29,7 +29,6 @@ chapters:
           - file: day1/3_python_introduction/05_lists_tuples
           - file: day1/3_python_introduction/05a_indexing
           - file: day1/3_python_introduction/05b_images_are_numpy_arrays
-          - file: day1/3_python_introduction/05c_slicing_images
           - file: day1/3_python_introduction/05d_masking
           - file: day1/3_python_introduction/06_Dictionaries_and_tables
           - file: day1/3_python_introduction/07_Conditions
