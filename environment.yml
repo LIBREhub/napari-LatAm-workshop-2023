@@ -24,3 +24,4 @@ dependencies:
   - pyrsistent
   - napari-ome-zarr
   - referencing
+  - pygments!=2.16
