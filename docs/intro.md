@@ -31,13 +31,13 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 
 | <div class="special">Time (Chile)</div>     | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> | <div class="special">Support</div> |
 | -------------    |:-------------:| -----:|-----:|
-| 08.00 – 09.00 | Motivating talk - Napari bioimage analysis | Juan Nunez-Iglesias | – |
-| 09.00 – 09.55 | Welcome and ice-break Session | Tobias Wenzel <br>[slides](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/Napari_LatAm_workshop_flash-talk_introductions.pdf)| Pierre Padilla Huamantico |
-| 10.10 – 12.00 | Environments Q & A <br> installation and set-up | Peter Sobolewski | Marcelo Zoccoler |
+| 08.00 – 09.00 | Motivating talk - Napari bioimage analysis | [Juan Nunez-Iglesias](https://twitter.com/jnuneziglesias) | – |
+| 09.00 – 09.55 | Welcome and ice-break Session | [Tobias Wenzel (host)](https://twitter.com/MakerTobey) <br>[slides](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/Napari_LatAm_workshop_flash-talk_introductions.pdf)| Pierre Padilla Huamantico |
+| 10.10 – 12.00 | Environments Q & A <br> installation and set-up | Peter Sobolewski | Marcelo Zoccoler, <br>Tobias Wenzel |
 | 12:00 - 13:00 | Lunch Break | | |
-| 13.00 – 14.55 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase  <br>[slides pptx](https://f1000research.com/slides/12-937), [PDF](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day1/1_introduction_to_napari/Intro_napari.pdf) | Marcelo Zoccoler |
-| 15.10 – 16.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | Marcelo Zoccoler <br>[slides1](https://github.com/LIBREhub/napari-LatAm-workshop-2023/raw/main/docs/day1/3_Python_Introduction/Python_basics.pdf), [slides2](https://github.com/LIBREhub/napari-LatAm-workshop-2023/raw/main/docs/day1/3_Python_Introduction/Python_data_structures.pdf)| Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
-| 16.30 – 17.30 | •	Masking numpy arrays <br>•	Dictionaries <br>•	Conditions <br>• Loops <br>• Functions | Melissa Weber Mendonça | Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
+| 13.00 – 14.55 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | [Robert Haase](https://twitter.com/haesleinhuepf)  <br>[slides pptx](https://f1000research.com/slides/12-937), [PDF](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day1/1_introduction_to_napari/Intro_napari.pdf) | Marcelo Zoccoler |
+| 15.10 – 16.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) <br>[slides1](https://github.com/LIBREhub/napari-LatAm-workshop-2023/raw/main/docs/day1/3_Python_Introduction/Python_basics.pdf), [slides2](https://github.com/LIBREhub/napari-LatAm-workshop-2023/raw/main/docs/day1/3_Python_Introduction/Python_data_structures.pdf)| [Adan Guerrero Cardenas](https://twitter.com/AdanGue1),  <br>[Pierre Padilla Huamantico](https://twitter.com/biodotpe),  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
+| 16.30 – 17.30 | •	Masking numpy arrays <br>•	Dictionaries <br>•	Conditions <br>• Loops <br>• Functions | [Melissa Weber Mendonça](https://twitter.com/melissawm) | Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
     
 </div>
 
@@ -47,11 +47,11 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 
 | <div class="special">Time (Chile)</div>     | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> | <div class="special">Support</div> |
 | -------------    |:-------------:| -----:|-----:|
-| 10:30 - 11:00 | Questions from the last day? | Marcelo Zoccoler | Tobias Wenzel,  <br>Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
-| 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | Marcelo Zoccoler | Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez|
-| 12.00 – 14.00 | Introduction to Image Analysis (Presentation) | Rocco D'Antuono | – |
+| 10:30 - 11:00 | Questions from the last day? | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) | Tobias Wenzel,  <br>Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
+| 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) | Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez|
+| 12.00 – 14.00 | Introduction to Image Analysis (Presentation) | [Rocco D'Antuono](https://twitter.com/RogerDAntuono) | – |
 | 14:00 - 16:00 | Lunch Break | | |
-| 16.00 – 19.00 | napari/Python Training: <br>• Filters (Smoothing, Edge detection) <br>• Segmentation, Thresholding, Labelling and Measurement | Juan Nunez-Iglesias | Adan Guerrero Cardenas,  <br>Daniel Althviz Moré |
+| 16.00 – 19.00 | napari/Python Training: <br>• Filters (Smoothing, Edge detection) <br>• Segmentation, Thresholding, Labelling and Measurement | [Juan Nunez-Iglesias](https://twitter.com/jnuneziglesias) | Adan Guerrero Cardenas,  <br>Daniel Althviz Moré |
 
 
 </div>
@@ -64,15 +64,15 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 
 | <div class="special">Time</div> | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> |
 | ------------- |:-------------:| -----:|
-| 08.00 – 08.20 | Napari Animation | Juan Nunez-Iglesias |
-| 08:20-8:50 | Affinder | Juan Nunez-Iglesias |
-| 08:50 – 9:30 | Napari Clusters Plotter (Unsupervised machine learning) | Marcelo Zoccoler |
+| 08.00 – 08.20 | Napari Animation | [Juan Nunez-Iglesias](https://twitter.com/jnuneziglesias) |
+| 08:20-8:50 | Affinder | [Juan Nunez-Iglesias](https://twitter.com/jnuneziglesias) |
+| 08:50 – 9:30 | Napari Clusters Plotter (Unsupervised machine learning) | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) |
 | 09:30 - 10:00 | Break | |
-| 10.10 – 11.00 | Napari Zelda (3D segmentation) | Rocco D'Antuono |
+| 10.10 – 11.00 | Napari Zelda (3D segmentation) | [Rocco D'Antuono](https://twitter.com/RogerDAntuono) |
 | 11.00 – 12.00 | Napari Superres (Superresolution) | Julian Mejia |
-| 12:00 - 12:40 | Napari real time processing | Lucien Hinderling |
+| 12:00 - 12:40 | Napari real time processing | [Lucien Hinderling](https://twitter.com/lhinderling) |
 | 12:40 - 14:00 | Lunch Break | |
-| 14:00 - 15:00 | Python libraries for microscope control | Talley Lambert |
+| 14:00 - 15:00 | Python libraries for microscope control | [Talley Lambert](https://twitter.com/TalleyJLambert) |
 
 </div>
 
