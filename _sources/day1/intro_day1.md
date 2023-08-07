@@ -1,16 +1,10 @@
 # Day 1: Introduction to Python and Bio-image Analysis
 
-🚧🚧🚧🚧🚧🚧
 
-**TODO:** 
+Welcome to our Quantiative Bio-Image Analysis using Napari course for Latin America!
+In the first session we get to know each other with the flash-talk slides you prepared.
 
- - Update the link below to the new pdf
+[Slides](https://docs.google.com/presentation/d/1MC4UUjz4-YV-q0Extd2Ir1wAjy3fLtAhNUdeJ1_Zflw/edit#slide=id.g239bfddd553_0_21).
 
-🚧🚧🚧🚧🚧🚧
-
-Welcome to our Quantiative Bio-Image Analysis using Napari course! In the first session we get to know each other and do a little Python Quiz.
-
-[Slides](https://github.com/BiAPoL/Image-data-science-with-Python-and-Napari-EPFL2022/raw/main/docs/day1/Introduction_Course.pdf).
-
-Afterwards, we will go through some Python basics and the main concepts of scientific bio-image analysis. In the afternoon, we do the first steps of typical bio-image analysis workflows: open and display images. For multi-dimensional data, we introduce you to napari, a fast, interactive, multi-dimensional image viewer for Python. By the end of the day we will demonstrate how image processing filters work and we will apply a few of them to reduce noise, background or enhance edges. 
+Afterwards, we will go through some Python basics and the main concepts of scientific bio-image analysis.
 

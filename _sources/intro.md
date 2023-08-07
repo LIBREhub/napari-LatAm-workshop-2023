@@ -33,7 +33,7 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 | -------------    |:-------------:| -----:|-----:|
 | 08.00 – 09.00 | Motivating talk - Napari bioimage analysis | Juan Nunez-Iglesias | – |
 | 09.00 – 10.00 | Welcome and ice-break Session | Tobias Wenzel | Claudia, Pierre |
-| 10.00 – 12.00 | Explain environments <br>Python code in Jupyter notebooks | Talley Lambert | Adan, Marcelo Zoccoler & Peter Sobolewski |
+| 10.00 – 12.00 | Environments Q & A <br>Python code in Jupyter notebooks | Peter Sobolewski | Marcelo Zoccoler |
 | 12:00 - 13:00 | Lunch Break | | |
 | 13.00 – 15.00 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase | Marcelo Zoccoler |
 | 15.00 – 15.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas & varios IIBM UC |
