@@ -68,7 +68,7 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 08:20-8:50 | Affinder | Juan Nunez-Iglesias |
 | 08:50 – 9:30 | Napari Clusters Plotter (Unsupervised machine learning) | Marcelo Zoccoler |
 | 09:30 - 10:00 | Break | |
-| 10.10 – 11.00 | Napari Zelda (3D segmentation) | Rocco |
+| 10.10 – 11.00 | Napari Zelda (3D segmentation) | Rocco D'Antuono |
 | 11.00 – 12.00 | Napari Superres (Superresolution) | Julian Mejia |
 | 12:00 - 12:40 | Napari real time processing | Lucien Hinderling |
 | 12:40 - 14:00 | Lunch Break | |
