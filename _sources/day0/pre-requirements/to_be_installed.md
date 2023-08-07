@@ -94,6 +94,8 @@ $Env:MAMBA_ROOT_PREFIX=$HOME\envs
 
 .\micromamba.exe shell init -s powershell -p $HOME\envs
 ```
+If this does not work for you on windowns powershell (the $HOME was an issue for some and your username had to be added), please follow the instructions on the [micromamba / mamba installation page](https://mamba.readthedocs.io/en/latest/micromamba-installation.html) instead.
+
 
 # Creating the environment for this course
 
