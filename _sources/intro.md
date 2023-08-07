@@ -32,7 +32,7 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 | <div class="special">Time (Chile)</div>     | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> | <div class="special">Support</div> |
 | -------------    |:-------------:| -----:|-----:|
 | 08.00 – 09.00 | Motivating talk - Napari bioimage analysis | Juan Nunez-Iglesias | – |
-| 09.00 – 09.55 | Welcome and ice-break Session | Tobias Wenzel | Claudia, Pierre |
+| 09.00 – 09.55 | Welcome and ice-break Session | Tobias Wenzel <br>[slides](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/Napari_LatAm workshop_flash-talk_introductions.pdf)| Pierre Padilla Huamantico |
 | 10.10 – 12.00 | Environments Q & A <br> and Python code in Jupyter notebooks | Peter Sobolewski | Marcelo Zoccoler |
 | 12:00 - 13:00 | Lunch Break | | |
 | 13.00 – 14.55 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase  <br>[slides](https://f1000research.com/slides/12-937) | Marcelo Zoccoler |
