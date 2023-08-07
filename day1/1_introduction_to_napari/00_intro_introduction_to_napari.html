@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'day1/1_introduction_to_napari/00_intro_introduction_to_napari';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Jupyter notebooks and napari" href="../2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks.html" />
+    <link rel="next" title="Interactive pixel classification and object segmentation in Napari" href="interactive_pixel_classification/readme.html" />
     <link rel="prev" title="Day 1: Introduction to Python and Bio-image Analysis" href="../intro_day1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -162,10 +162,11 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../intro_day1.html">Day 1: Introduction to Python and Bio-image Analysis</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Introduction to the course</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks.html">Jupyter notebooks and napari</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../2_napari_and_jupyter_notebooks/napari-assistant.html">The Napari Assistant</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../2_napari_and_jupyter_notebooks/export_notebooks.html">Generating Jupyter Notebooks from the Napari Assistant</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Introduction to the course</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="interactive_pixel_classification/readme.html">Interactive pixel classification and object segmentation in Napari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive_object_classification/readme.html">Interactive object classification in Napari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="napari-assistant.html">The Napari Assistant</a></li>
+<li class="toctree-l3"><a class="reference internal" href="notebook_export.html">Generating Jupyter Notebooks from the Napari Assistant</a></li>
 </ul>
 </li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../3_python_introduction/00_intro_python_introduction.html">Introduction to Python</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -404,10 +405,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-napari">Introduction to Napari</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-instructions">Installation instructions</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
             </nav>
         </div>
@@ -425,25 +423,18 @@ document.write(`
 <section id="introduction-to-napari">
 <h2>Introduction to Napari<a class="headerlink" href="#introduction-to-napari" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day1/1_introduction_to_napari/Introduction_napari.pdf">Slides</a>.</p></li>
+<li><p>Slides <a class="reference external" href="https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day1/1_introduction_to_napari/Introduction_napari.pdf">PDF</a>, <span class="xref myst">PPTX</span>.</p></li>
 </ul>
 </section>
 <section id="exercises">
 <h2>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="06_napari-assistant.html"><span class="doc std std-doc">Setting up an image processing workflow using the Napari-assistant</span></a></p></li>
-<li><p><a class="reference internal" href="07_notebook_export.html"><span class="doc std std-doc">Exporting a workflow as Jupyter Notebook</span></a></p></li>
+<li><p><span class="xref myst">Setting up an image processing workflow using the Napari-assistant</span></p></li>
+<li><p><span class="xref myst">Exporting a workflow as Jupyter Notebook</span></p></li>
 </ul>
-<section id="installation-instructions">
-<h3>Installation instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this heading">#</a></h3>
-<p>In this session, we will work with the <a class="reference external" href="https://github.com/haesleinhuepf/devbio-napari">devbio-napari</a> distribution of napari.</p>
-<p>You can setup a conda/mamba environment like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mamba</span> <span class="n">create</span> <span class="o">--</span><span class="n">name</span> <span class="n">devbio</span><span class="o">-</span><span class="n">napari</span><span class="o">-</span><span class="n">env</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.9</span> <span class="n">devbio</span><span class="o">-</span><span class="n">napari</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
-</pre></div>
+</section>
+<div class="toctree-wrapper compound">
 </div>
-<p>If you are new to conda/mamba, consider reading this <a class="reference external" href="https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html">blog post</a> first.</p>
-</section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -487,11 +478,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="../2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks.html"
+       href="interactive_pixel_classification/readme.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Jupyter notebooks and napari</p>
+        <p class="prev-next-title">Interactive pixel classification and object segmentation in Napari</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -514,10 +505,7 @@ document.write(`
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-napari">Introduction to Napari</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installation-instructions">Installation instructions</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercises">Exercises</a></li>
 </ul>
   </nav></div>
 
