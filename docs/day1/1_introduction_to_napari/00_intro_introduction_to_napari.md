@@ -4,7 +4,7 @@ Welcome to our Image Data Science with Napari and Python for Latin-America cours
 
 ## Introduction to Napari
 
-* [Slides](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day1/1_introduction_to_napari/Introduction_napari.pdf).
+* Slides [PDF](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day1/1_introduction_to_napari/Introduction_napari.pdf), [PPTX]().
 
 ## Exercises
 
