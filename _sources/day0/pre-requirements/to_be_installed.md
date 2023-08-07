@@ -122,6 +122,14 @@ After some time (napari takes time to launch the first time), you should see a
 napari window open. You should be able to click the menu `File > Open Samples >
 clEsperanto > blobs (from ImageJ)` and see an image appear.
 
+To quit napari you can close the window or use control c in the terminal. To open jupyter lab (jupyter notebook editor) to see the course content and excecute the excersizes, type:
+
+```
+jupyter lab
+```
+Later during the excercises we will launch the napari viewer from the jupyter notebooks.
+
+
 # Troubleshooting
 
 ## Graphics cards drivers
