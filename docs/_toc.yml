@@ -16,10 +16,11 @@ chapters:
 
       - file: day1/1_introduction_to_napari/00_intro_introduction_to_napari
       # Optionally add sub-sections here
-      - file: day1/2_napari_and_jupyter_notebooks/00_intro_jupyter_notebooks
         sections:
-          - file: day1/2_napari_and_jupyter_notebooks/napari-assistant
-          - file: day1/2_napari_and_jupyter_notebooks/export_notebooks
+          - file: day1/1_introduction_to_napari/interactive_pixel_classification/readme
+          - file: day1/1_introduction_to_napari/interactive_object_classification/readme
+          - file: day1/1_introduction_to_napari/napari-assistant
+          - file: day1/1_introduction_to_napari/notebook_export
       # Optionally add sub-sections here
       - file: day1/3_python_introduction/00_intro_python_introduction
         sections:
