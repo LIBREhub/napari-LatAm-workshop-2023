@@ -70,8 +70,8 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 09:30 - 10:00 | Break | |
 | 10.10 – 11.00 | Napari Zelda (3D segmentation) | Rocco |
 | 11.00 – 12.00 | Napari Superres (Superresolution) | Julian Mejia |
-| 12:00 - 13:00 | Napari real time processing? | Lucien Hinderling |
-| 13:00 - 14:00 | Lunch Break | |
+| 12:00 - 12:40 | Napari real time processing? | Lucien Hinderling |
+| 12:40 - 14:00 | Lunch Break | |
 | 14:00 - 15:00 | Python libraries for microscope control | Talley Lambert |
 
 </div>
