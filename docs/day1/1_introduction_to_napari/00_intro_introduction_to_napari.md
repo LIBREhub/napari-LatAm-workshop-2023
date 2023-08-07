@@ -10,15 +10,3 @@ Welcome to our Image Data Science with Napari and Python for Latin-America cours
 
 * [Setting up an image processing workflow using the Napari-assistant](06_napari-assistant.md)
 * [Exporting a workflow as Jupyter Notebook](07_notebook_export.md)
-
-### Installation instructions
-
-In this session, we will work with the [devbio-napari](https://github.com/haesleinhuepf/devbio-napari) distribution of napari. 
-
-You can setup a conda/mamba environment like this:
-
-```
-mamba create --name devbio-napari-env-18 python=3.9 devbio-napari napari==0.4.18 pyqt pyrsistent -c conda-forge
-```
-
-If you are new to conda/mamba, consider reading this [blog post](https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html) first.
