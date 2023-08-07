@@ -32,12 +32,12 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 | <div class="special">Time (Chile)</div>     | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> | <div class="special">Support</div> |
 | -------------    |:-------------:| -----:|-----:|
 | 08.00 – 09.00 | Motivating talk - Napari bioimage analysis | Juan Nunez-Iglesias | – |
-| 09.00 – 10.00 | Welcome and ice-break Session | Tobias Wenzel | Claudia, Pierre |
-| 10.00 – 12.00 | Environments Q & A <br> and Python code in Jupyter notebooks | Peter Sobolewski | Marcelo Zoccoler |
+| 09.00 – 09.55 | Welcome and ice-break Session | Tobias Wenzel | Claudia, Pierre |
+| 10.10 – 12.00 | Environments Q & A <br> and Python code in Jupyter notebooks | Peter Sobolewski | Marcelo Zoccoler |
 | 12:00 - 13:00 | Lunch Break | | |
-| 13.00 – 15.00 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase | Marcelo Zoccoler |
-| 15.00 – 15.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas & varios IIBM UC |
-| 16.30 – 17.00 | •	Masking numpy arrays <br>•	Dictionaries <br>•	Conditions <br>• Loops <br>• Functions | Melissa Weber Mendonça | Adan Guerrero Cardenas & varios IIBM UC |
+| 13.00 – 14.55 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase [slides](https://f1000research.com/slides/12-937) | Marcelo Zoccoler |
+| 15.10 – 16.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas, Pierre Padilla Huamantico, Guillermo Sahonero Alvarez, Jorge Gonzalez |
+| 16.30 – 17.00 | •	Masking numpy arrays <br>•	Dictionaries <br>•	Conditions <br>• Loops <br>• Functions | Melissa Weber Mendonça | Adan Guerrero Cardenas, Pierre Padilla Huamantico, Guillermo Sahonero Alvarez, Jorge Gonzalez |
     
 </div>
 
@@ -47,8 +47,8 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 
 | <div class="special">Time (Chile)</div>     | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> | <div class="special">Support</div> |
 | -------------    |:-------------:| -----:|-----:|
-| 10:30 - 11:00 | Questions from the last day? | Marcelo Zoccoler | Tobias Wenzel, Adan Guerrero Cardenas & varios IIBM UC |
-| 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | Marcelo Zoccoler | Adan Guerrero Cardenasn & varios IIBM UC |
+| 10:30 - 11:00 | Questions from the last day? | Marcelo Zoccoler | Tobias Wenzel, Adan Guerrero Cardenas, Pierre Padilla Huamantico, Guillermo Sahonero Alvarez, Jorge Gonzalez |
+| 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | Marcelo Zoccoler | Adan Guerrero Cardenas, Pierre Padilla Huamantico, Guillermo Sahonero Alvarez, Jorge Gonzalez|
 | 12.00 – 14.00 | Introduction to Image Analysis (Presentation) | Rocco D'Antuono | – |
 | 14:00 - 16:00 | Lunch Break | | |
 | 16.00 – 19.00 | napari/Python Training: <br>• Filters (Smoothing, Edge detection) <br>• Segmentation, Thresholding, Labelling and Measurement | Juan Nunez-Iglesias | Adan Guerrero Cardenas, Daniel Althviz Moré |
