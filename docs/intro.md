@@ -58,7 +58,7 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 
 On the third and last day, there are showcase seminars of key napari plugins as well as emerging trends to controll your bioimaging hardware with python libraries
 
-### Day 3 - Friday the 11th of August 2023 (open to all)
+### Day 3 - Friday the 11th of August 2023 (open to all on [Zoom](https://zoom.us/j/91498853978?pwd=M0hYek5MczlVZXg2VWQ0U2pid0l0UT09) )
 
 <div class="markdown-table">
 
