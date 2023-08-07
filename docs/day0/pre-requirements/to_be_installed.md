@@ -12,7 +12,7 @@ Jupyter Installation Guide: https://jupyter.org/install
 First, you need to install a tool called an *environment manager* in your
 computer. For this course we will use conda or its variants mamba and
 micromamba. If you already have one of those tools, great! Skip to the next
-section. Otherwise, we recommend installing micromamba. Follow the
+section. Otherwise, we recommend installing [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html). Follow the
 instructions for your operating system:
 
 ## macOS
