@@ -36,7 +36,7 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 | 10.00 – 12.00 | Environments Q & A <br> and Python code in Jupyter notebooks | Peter Sobolewski | Marcelo Zoccoler |
 | 12:00 - 13:00 | Lunch Break | | |
 | 13.00 – 15.00 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | Robert Haase | Marcelo Zoccoler |
-| 15.00 – 15.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas & varios IIBM UC |
+| 15.00 – 16.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | Marcelo Zoccoler | Adan Guerrero Cardenas & varios IIBM UC |
 | 16.30 – 17.00 | •	Masking numpy arrays <br>•	Dictionaries <br>•	Conditions <br>• Loops <br>• Functions | Melissa Weber Mendonça | Adan Guerrero Cardenas & varios IIBM UC |
     
 </div>
