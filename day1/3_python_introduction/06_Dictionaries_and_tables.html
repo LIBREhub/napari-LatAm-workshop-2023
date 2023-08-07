@@ -426,7 +426,7 @@ document.write(`
 <li><p><a class="reference external" href="https://www.w3schools.com/python/python_dictionaries.asp">Dictionaries in python</a></p></li>
 <li><p><a class="reference external" href="https://stackoverflow.com/questions/16819222/how-to-return-dictionary-keys-as-a-list-in-python">Dictionary keys as list</a></p></li>
 </ul>
-<p>You can define dictionary like this:</p>
+<p>You can define a dictionary like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_metadata_dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;x_resolution&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;y_resolution&#39;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span> <span class="s1">&#39;z_resolution&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;voxel_physical_unit&#39;</span><span class="p">:</span> <span class="s1">&#39;um&#39;</span><span class="p">}</span>
@@ -453,24 +453,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;x_resolution&#39;: 0.25,
- &#39;y_resolution&#39;: 0.25,
- &#39;z_resolution&#39;: 1.0,
- &#39;voxel_physical_unit&#39;: &#39;um&#39;}
-</pre></div>
-</div>
-</div>
 </div>
 <p>If you want to access a given entry in the dictionary, you can address it using square brackets and the key:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_metadata_dictionary</span><span class="p">[</span><span class="s1">&#39;x_resolution&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.25
 </pre></div>
 </div>
 </div>
@@ -489,15 +476,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;x_resolution&#39;: 0.25,
- &#39;y_resolution&#39;: 0.25,
- &#39;z_resolution&#39;: 1.0,
- &#39;voxel_physical_unit&#39;: &#39;um&#39;,
- &#39;fps&#39;: 60}
-</pre></div>
-</div>
-</div>
 </div>
 <p>You can also retrieve a list of all keys in the dictionary:</p>
 <div class="cell docutils container">
@@ -513,20 +491,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;x_resolution&#39;, &#39;y_resolution&#39;, &#39;z_resolution&#39;, &#39;voxel_physical_unit&#39;, &#39;fps&#39;]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">keys</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;y_resolution&#39;
 </pre></div>
 </div>
 </div>
@@ -554,24 +522,10 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Monday&#39;: [2.3, 3.1, 5.6],
- &#39;Tuesday&#39;: [1.8, 7.0, 4.3],
- &#39;Wednesday&#39;: [4.5, 1.5, 3.2],
- &#39;Thursday&#39;: [1.9, 2.0, 6.4],
- &#39;Friday&#39;: [4.4, 2.3, 5.4]}
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">measurements_week</span><span class="p">[</span><span class="s1">&#39;Monday&#39;</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2.3, 3.1, 5.6]
 </pre></div>
 </div>
 </div>
@@ -602,11 +556,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;width&#39;: [5, 2], &#39;height&#39;: [3, 4], &#39;area&#39;: [15, 8]}
-</pre></div>
-</div>
-</div>
 </div>
 <p>You can use the <a class="reference external" href="https://pandas.pydata.org/"><code class="docutils literal notranslate"><span class="pre">pandas</span></code></a> library to better visualize tables (also called dataframes).</p>
 <div class="cell docutils container">
@@ -619,46 +568,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>width</th>
-      <th>height</th>
-      <th>area</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>5</td>
-      <td>3</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>4</td>
-      <td>8</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="exercise">

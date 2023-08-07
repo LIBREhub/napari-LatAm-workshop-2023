@@ -447,15 +447,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
-</pre></div>
-</div>
-</div>
 </div>
 <p>Note that the above code that is indented will only be excuted for the first given number (0) and continue until the last number (5) but not including it.</p>
 <p>You can also loop over a range of numbers with a defined step, for example step 3:</p>
@@ -466,27 +457,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-3
-6
-9
-</pre></div>
-</div>
-</div>
 </div>
 <p>Iterating over arrays allows you to do something with all array elements:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">animal</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Dog&quot;</span><span class="p">,</span> <span class="s2">&quot;Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Mouse&quot;</span><span class="p">]:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">animal</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dog
-Cat
-Mouse
 </pre></div>
 </div>
 </div>
@@ -503,21 +479,6 @@ Mouse
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Paired measurements: 1 and 4
-Paired measurements: 9 and 5
-Paired measurements: 7 and 5
-Paired measurements: 1 and 7
-Paired measurements: 2 and 4
-Paired measurements: 8 and 5
-Paired measurements: 9 and 4
-Paired measurements: 2 and 6
-Paired measurements: 1 and 6
-Paired measurements: 7 and 5
-Paired measurements: 8 and 4
-</pre></div>
-</div>
-</div>
 </div>
 <p>If you want to know the index of the element in the list as well, use the <a class="reference external" href="https://realpython.com/python-enumerate/">enumerate</a> function:</p>
 <div class="cell docutils container">
@@ -525,13 +486,6 @@ Paired measurements: 8 and 4
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># numbering and iterating through collections</span>
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">animal</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">([</span><span class="s2">&quot;Dog&quot;</span><span class="p">,</span> <span class="s2">&quot;Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Mouse&quot;</span><span class="p">]):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The animal number &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; in the list is &quot;</span> <span class="o">+</span> <span class="n">animal</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The animal number 0 in the list is Dog
-The animal number 1 in the list is Cat
-The animal number 2 in the list is Mouse
 </pre></div>
 </div>
 </div>
@@ -553,11 +507,6 @@ The animal number 2 in the list is Mouse
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 2, 4, 6, 8]
-</pre></div>
-</div>
-</div>
 </div>
 <p>One can also write that shorter. The underlying concept is called <a class="reference external" href="https://wiki.python.org/moin/Generators">generators</a>.</p>
 <div class="cell docutils container">
@@ -565,11 +514,6 @@ The animal number 2 in the list is Mouse
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 2, 4, 6, 8]
 </pre></div>
 </div>
 </div>
@@ -590,11 +534,6 @@ The animal number 2 in the list is Mouse
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 6]
-</pre></div>
-</div>
-</div>
 </div>
 <p>And the short version like this:</p>
 <div class="cell docutils container">
@@ -602,11 +541,6 @@ The animal number 2 in the list is Mouse
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">2</span><span class="p">]</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">numbers</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 6]
 </pre></div>
 </div>
 </div>
@@ -622,20 +556,6 @@ The animal number 2 in the list is Mouse
 <span class="k">while</span> <span class="p">(</span><span class="n">number</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">):</span>
     <span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">/</span> <span class="mi">2</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>512.0
-256.0
-128.0
-64.0
-32.0
-16.0
-8.0
-4.0
-2.0
-1.0
 </pre></div>
 </div>
 </div>
@@ -657,21 +577,6 @@ The animal number 2 in the list is Mouse
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>512.0
-256.0
-128.0
-64.0
-32.0
-16.0
-8.0
-4.0
-2.0
-1.0
-0.5
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -679,17 +584,6 @@ The animal number 2 in the list is Mouse
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
         <span class="k">break</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-4
-5
-6
 </pre></div>
 </div>
 </div>
@@ -704,16 +598,6 @@ The animal number 2 in the list is Mouse
     <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">3</span> <span class="ow">and</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">6</span><span class="p">:</span>
         <span class="k">continue</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-7
-8
-9
 </pre></div>
 </div>
 </div>
@@ -755,12 +639,6 @@ The animal number 2 in the list is Mouse
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(512, 512)
-</pre></div>
-</div>
-<img alt="../../_images/2442a24f41099f6ba0a6a2feaea5d9e332f73884280454205df9738e772c0fd2.png" src="../../_images/2442a24f41099f6ba0a6a2feaea5d9e332f73884280454205df9738e772c0fd2.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -777,16 +655,6 @@ The animal number 2 in the list is Mouse
     <span class="n">imshow</span><span class="p">(</span><span class="n">tile</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Starting row index: 0
-Ending row index: 256
-Starting row index: 256
-Ending row index: 512
-</pre></div>
-</div>
-<img alt="../../_images/caabe06706bb70bed888dd900aa910661f6f89d41b2432d164cde7d4fbb2a4ce.png" src="../../_images/caabe06706bb70bed888dd900aa910661f6f89d41b2432d164cde7d4fbb2a4ce.png" />
-<img alt="../../_images/36f32dcb82fd27c7f1e4b51d2df1c71e3b8dec9aa2b4c6ccd14d0cb9629a78fd.png" src="../../_images/36f32dcb82fd27c7f1e4b51d2df1c71e3b8dec9aa2b4c6ccd14d0cb9629a78fd.png" />
 </div>
 </div>
 </section>
