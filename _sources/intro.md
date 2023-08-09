@@ -1,4 +1,4 @@
-# Image data science for with Python and Napari
+# Image data science with Python and Napari
 
 A first Latin America workshop #LIBREhub @napari #LABI - Latin America Bioimaging #MexicoBioimaging
 
