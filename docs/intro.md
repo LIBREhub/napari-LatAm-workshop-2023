@@ -66,6 +66,7 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 
 | <div class="special">Time</div> | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> |
 | ------------- |:-------------:| -----:|
+| 07.55 – 08.00 | Welcome! | [Tobias Wenzel (host)](https://twitter.com/MakerTobey) |
 | 08.00 – 08.20 | Napari Animation | [Juan Nunez-Iglesias](https://twitter.com/jnuneziglesias) |
 | 08:20-8:50 | Affinder | [Juan Nunez-Iglesias](https://twitter.com/jnuneziglesias) |
 | 08:50 – 9:30 | Napari Clusters Plotter (Unsupervised machine learning) | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) |
