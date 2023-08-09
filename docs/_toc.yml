@@ -39,7 +39,7 @@ chapters:
   # Day2
   - file: day2/intro_day2
     sections:
-
+      - file: day2/Introduction_to_Image_Analysis/Introduction_to_image_analysis
       - file: day2/1_File_paths/readme
         sections:
           - file: day2/1_File_paths/04_Image_file_formats
