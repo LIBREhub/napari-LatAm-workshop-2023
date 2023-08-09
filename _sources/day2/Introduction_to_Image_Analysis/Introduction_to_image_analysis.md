@@ -1,13 +1,7 @@
 
 # Introduction to Bioimage analysis
-#### (a soft introduction to)
-
-
-<br>
-
-Rocco D’Antuono
-
-Crick Advanced Light Microscopy STP, The Francis Crick Institute (London, UK)
+#### Introduction to Bioimage analysis (a soft introduction to)
+[Rocco D’Antuono](https://roccodant.github.io/)<br>Crick Advanced Light Microscopy STP, The Francis Crick Institute (London, UK)
 <br><br>
 
 This section is divided in 3 parts:
