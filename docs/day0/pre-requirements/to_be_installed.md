@@ -10,10 +10,36 @@ Jupyter Installation Guide: https://jupyter.org/install
 # Managing environments
 
 First, you need to install a tool called an *environment manager* in your
-computer. For this course we will use conda or its variants mamba and
+computer. To learn more about environments we reccomend to read the [dedicated teaching material on environments](https://hackmd.io/@talley/SJB_lObBi#Python-environments-workshop). For this course we will use conda or its variants mamba and
 micromamba. If you already have one of those tools, great! Skip to the next
 section. Otherwise, we recommend installing [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html). Follow the
 instructions for your operating system:
+
+### NOTE: Pre-exsisting Anaconda on our computer
+
+If you already have Anaconda installed on your system this can lead to issues with running (micro)mamba - due to CONDA env vars and prefixes.
+Anaconda has been very well popularized in the past but it is not reccomended to run new and fast changing modular systems like napari.
+In principle, it should be possible to run micromamba in parallel to your Anaconda installation, but it might require some trouble shooting.
+One option is to let those folks keep using their existing anaconda with conda-forge and lib mamba solver referencing to:
+https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge
+https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community
+
+We reccomend to uninstall Anaconda (following guides in the internet). 
+If you want to run your old scripts in the same environment that you accessed through the Anaconda interface in the past, you can create the same environment again from your new system by typing `mamba create -n anaconda -c anaconda anaconda python=3.8`.
+This will pull the anaconda meta package from the anaconda channel and make a new env named anaconda for you with python 3.8. You can change the python version as needed.
+
+Even if you have multiple conda setups, you can make it work. It's just that names will not be sufficient. Here's an example where the conda napari bundle is installed in a conda environment using:
+`mamba env list` I get:
+```
+...
+rosetta                  /Users/piotrsobolewski/Dev/miniforge3/envs/rosetta
+                         /Users/piotrsobolewski/Library/napari-0.4.18rc2
+                         /Users/piotrsobolewski/Library/napari-0.4.18rc2/envs/napari-0.4.18rc2
+```
+You can see my miniforge3 env `rosetta` by name, but others from the bundle don't have proper names.
+Still, ` mamba activate /Users/piotrsobolewski/Library/napari-0.4.18rc2` works correctly in this example.
+
+If you don't have Anaconda, or you have uninstalled it already, you can follow the (micro)mamba installation instructions for your operating system:
 
 ## macOS
 
@@ -80,7 +106,9 @@ Install micromamba by following the instructions
 
 ## Windows
 
-Open a PowerShell terminal and type the following commands to install and
+Note, the installation of micromamba can be more challenging on Windows. We reccommend using [mamba instead by installing mamba-forge](https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html). 
+
+If you want to try setting up the fast and slim micromamba anyways, open a PowerShell terminal and type the following commands to install and
 configure micromamba for Windows:
 
 ```
@@ -94,7 +122,7 @@ $Env:MAMBA_ROOT_PREFIX=$HOME\envs
 
 .\micromamba.exe shell init -s powershell -p $HOME\envs
 ```
-If this does not work for you on windowns powershell (the $HOME was an issue for some and your username had to be added), please follow the instructions on the [micromamba / mamba installation page](https://mamba.readthedocs.io/en/latest/micromamba-installation.html) instead.
+If this does not work for you on Windows PowerShell (the $HOME was an issue for some and your username had to be added), please follow the instructions on the [micromamba / mamba installation page](https://mamba.readthedocs.io/en/latest/micromamba-installation.html) instead.
 
 
 # Creating the environment for this course
