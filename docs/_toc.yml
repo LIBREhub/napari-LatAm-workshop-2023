@@ -45,6 +45,8 @@ chapters:
           - file: day2/1_File_paths/04_Image_file_formats
           - file: day2/1_File_paths/05_Folder_structures
           - file: day2/1_File_paths/06_EXERCISE_Folder_structures_2
+      - file: day2/01_image_filtering.ipynb
+      - file: day2/02_segmentation_and_measuring.ipynb
 
   # Day 3
   - file: day3/intro_day3
