@@ -89,7 +89,7 @@ Assuming you downloaded the repository to your Desktop, you can open the Jupyter
 ```bash
 cd Desktop/napari-LatAm-workshop-2023
 
-micromamba activate devbio-napari-env
+micromamba activate napari-latam
 
 jupyter lab
 ```
