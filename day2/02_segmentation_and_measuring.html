@@ -459,7 +459,8 @@ document.write(`
 <p>Here is a very simple image and segmentation, taken from <a class="reference external" href="https://scikit-image.org/docs/dev/auto_examples/segmentation/plot_watershed.html#sphx-glr-auto-examples-segmentation-plot-watershed-py">this scikit-image gallery example</a>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">ndimage</span> <span class="k">as</span> <span class="n">ndi</span>
 
 <span class="kn">import</span> <span class="nn">napari</span>
@@ -525,7 +526,6 @@ document.write(`
 <ul class="simple">
 <li><p>zoom with scroll, pan with click and drag</p></li>
 <li><p>try clicking on the 👁️ icon on each layer in the layer list to make them invisible or visible again</p></li>
-<li><p>try alt-clicking on the icon: this makes every other layer invisible</p></li>
 <li><p>try changing the opacity, colormap, or interpolation on a layer</p></li>
 <li><p>try turning on “grid mode”, from the group of buttons at the bottom-left of the viewer.</p></li>
 <li><p><em>select</em> the labels layer, click on the paintbrush tool, and tweak the segmentation where the two labels meet.</p></li>
