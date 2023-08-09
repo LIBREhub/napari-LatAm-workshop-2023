@@ -6,8 +6,8 @@
 <br>
 
 Rocco D’Antuono
-Crick Advanced Light Microscopy STP
-The Francis Crick Institute (London, UK)
+
+Crick Advanced Light Microscopy STP, The Francis Crick Institute (London, UK)
 <br><br>
 
 This section is divided in 3 parts:
@@ -30,6 +30,13 @@ This section is divided in 3 parts:
 ---
 
 ## Some exercises
+
+|Image inspection |
+| ---- |
+![](https://media.springernature.com/lw685/springer-static/image/chp%3A10.1007%2F978-3-031-04477-9_4/MediaObjects/486621_1_En_4_Fig7_HTML.png)
+| Fig. 4.7 of D’Antuono, R. (2022). Basic Digital Image Acquisition, Design, Processing, Analysis, Management, and Presentation. In: Nechyporuk-Zloy, V. (eds) Principles of Light Microscopy: From Basic to Advanced . Springer, Cham. https://doi.org/10.1007/978-3-031-04477-9_4
+
+<br>
 
 |3D rendering in napari |
 | ---- |
