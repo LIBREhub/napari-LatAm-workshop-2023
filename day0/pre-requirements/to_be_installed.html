@@ -408,6 +408,7 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Course preparation</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-environments">Managing environments</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-pre-exsisting-anaconda-on-our-computer">NOTE: Pre-exsisting Anaconda on our computer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">macOS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
@@ -440,10 +441,33 @@ Make use of the <a class="reference external" href="https://napari.zulipchat.com
 <section class="tex2jax_ignore mathjax_ignore" id="managing-environments">
 <h1>Managing environments<a class="headerlink" href="#managing-environments" title="Permalink to this heading">#</a></h1>
 <p>First, you need to install a tool called an <em>environment manager</em> in your
-computer. For this course we will use conda or its variants mamba and
+computer. To learn more about environments we reccomend to read the <a class="reference external" href="https://hackmd.io/&#64;talley/SJB_lObBi#Python-environments-workshop">dedicated teaching material on environments</a>. For this course we will use conda or its variants mamba and
 micromamba. If you already have one of those tools, great! Skip to the next
 section. Otherwise, we recommend installing <a class="reference external" href="https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html">micromamba</a>. Follow the
 instructions for your operating system:</p>
+<section id="note-pre-exsisting-anaconda-on-our-computer">
+<h2>NOTE: Pre-exsisting Anaconda on our computer<a class="headerlink" href="#note-pre-exsisting-anaconda-on-our-computer" title="Permalink to this heading">#</a></h2>
+<p>If you already have Anaconda installed on your system this can lead to issues with running (micro)mamba - due to CONDA env vars and prefixes.
+Anaconda has been very well popularized in the past but it is not reccomended to run new and fast changing modular systems like napari.
+In principle, it should be possible to run micromamba in parallel to your Anaconda installation, but it might require some trouble shooting.
+One option is to let those folks keep using their existing anaconda with conda-forge and lib mamba solver referencing to:
+<a class="reference external" href="https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge">https://conda-forge.org/docs/user/introduction.html#how-can-i-install-packages-from-conda-forge</a>
+<a class="reference external" href="https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community">https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community</a></p>
+<p>We reccomend to uninstall Anaconda (following guides in the internet).
+If you want to run your old scripts in the same environment that you accessed through the Anaconda interface in the past, you can create the same environment again from your new system by typing <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">create</span> <span class="pre">-n</span> <span class="pre">anaconda</span> <span class="pre">-c</span> <span class="pre">anaconda</span> <span class="pre">anaconda</span> <span class="pre">python=3.8</span></code>.
+This will pull the anaconda meta package from the anaconda channel and make a new env named anaconda for you with python 3.8. You can change the python version as needed.</p>
+<p>Even if you have multiple conda setups, you can make it work. It’s just that names will not be sufficient. Here’s an example where the conda napari bundle is installed in a conda environment using:
+<code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">env</span> <span class="pre">list</span></code> I get:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">...</span>
+<span class="n">rosetta</span>                  <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">piotrsobolewski</span><span class="o">/</span><span class="n">Dev</span><span class="o">/</span><span class="n">miniforge3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">rosetta</span>
+                         <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">piotrsobolewski</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">napari</span><span class="o">-</span><span class="mf">0.4.18</span><span class="n">rc2</span>
+                         <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">piotrsobolewski</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">napari</span><span class="o">-</span><span class="mf">0.4.18</span><span class="n">rc2</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">napari</span><span class="o">-</span><span class="mf">0.4.18</span><span class="n">rc2</span>
+</pre></div>
+</div>
+<p>You can see my miniforge3 env <code class="docutils literal notranslate"><span class="pre">rosetta</span></code> by name, but others from the bundle don’t have proper names.
+Still, <code class="docutils literal notranslate"> <span class="pre">mamba</span> <span class="pre">activate</span> <span class="pre">/Users/piotrsobolewski/Library/napari-0.4.18rc2</span></code> works correctly in this example.</p>
+<p>If you don’t have Anaconda, or you have uninstalled it already, you can follow the (micro)mamba installation instructions for your operating system:</p>
+</section>
 <section id="macos">
 <h2>macOS<a class="headerlink" href="#macos" title="Permalink to this heading">#</a></h2>
 <p>If you are a macOS user <em>and</em> have installed <a class="reference external" href="https://brew.sh/">Homebrew</a>, open
@@ -492,7 +516,8 @@ places: the conda-forge channel, and, if that fails, the ome channel.)</p>
 </section>
 <section id="windows">
 <h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading">#</a></h2>
-<p>Open a PowerShell terminal and type the following commands to install and
+<p>Note, the installation of micromamba can be more challenging on Windows. We reccommend using <a class="reference external" href="https://biapol.github.io/blog/mara_lampert/getting_started_with_mambaforge_and_python/readme.html">mamba instead by installing mamba-forge</a>.</p>
+<p>If you want to try setting up the fast and slim micromamba anyways, open a PowerShell terminal and type the following commands to install and
 configure micromamba for Windows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Invoke-Webrequest -URI https://micro.mamba.pm/api/micromamba/win-64/latest -OutFile micromamba.tar.bz2
 tar xf micromamba.tar.bz2
@@ -505,7 +530,7 @@ $Env:MAMBA_ROOT_PREFIX=$HOME\envs
 .\micromamba.exe shell init -s powershell -p $HOME\envs
 </pre></div>
 </div>
-<p>If this does not work for you on windowns powershell (the $HOME was an issue for some and your username had to be added), please follow the instructions on the <a class="reference external" href="https://mamba.readthedocs.io/en/latest/micromamba-installation.html">micromamba / mamba installation page</a> instead.</p>
+<p>If this does not work for you on Windows PowerShell (the $HOME was an issue for some and your username had to be added), please follow the instructions on the <a class="reference external" href="https://mamba.readthedocs.io/en/latest/micromamba-installation.html">micromamba / mamba installation page</a> instead.</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="creating-the-environment-for-this-course">
@@ -635,6 +660,7 @@ source depending on your hardware from this list:</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Course preparation</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-environments">Managing environments</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note-pre-exsisting-anaconda-on-our-computer">NOTE: Pre-exsisting Anaconda on our computer</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macos">macOS</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linux">Linux</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#windows">Windows</a></li>
