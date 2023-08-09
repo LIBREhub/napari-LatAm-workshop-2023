@@ -183,6 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05a_indexing.html">Indexing and Slicing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05b_images_are_numpy_arrays.html">Images in python</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05c_slicing_images.html">Cropping images</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/05d_masking.html">Masking numpy arrays</a></li>
 
 <li class="toctree-l3"><a class="reference internal" href="../../day1/3_python_introduction/06_Dictionaries_and_tables.html">Dictionaries</a></li>
@@ -460,7 +461,7 @@ document.write(`
 <p>We start by providing the path to the highest level folder.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_folder2</span> <span class="o">=</span> <span class="s1">&#39;..\..\data\Folder_Structures\Project2_Omero_like&#39;</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_folder2</span> <span class="o">=</span> <span class="s1">&#39;../../../data/Folder_Structures/Project2_Omero_like&#39;</span> 
 <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">data_folder2</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -475,9 +476,9 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>..\..\data\Folder_Structures\Project2_Omero_like\Control
-..\..\data\Folder_Structures\Project2_Omero_like\Group1
-..\..\data\Folder_Structures\Project2_Omero_like\Readme.txt
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>..\..\..\data\Folder_Structures\Project2_Omero_like\Control
+..\..\..\data\Folder_Structures\Project2_Omero_like\Group1
+..\..\..\data\Folder_Structures\Project2_Omero_like\Readme.txt
 </pre></div>
 </div>
 </div>
@@ -488,13 +489,16 @@ document.write(`
 </pre></div>
 </div>
 <p>We can do that by putting an <code class="docutils literal notranslate"><span class="pre">if</span></code> condition inside the first <code class="docutils literal notranslate"><span class="pre">for</span></code> loop and a second <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to be run if the condition is met.</p>
+<p><em>Note: the <a class="reference external" href="https://docs.python.org/3/howto/sorting.html"><code class="docutils literal notranslate"><span class="pre">sorted</span></code></a> function can  sort paths alphabetically. Another good more sophisticated option is <a class="reference external" href="https://github.com/SethMMorton/natsort#quick-description">natsort</a></em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fisrt for loop: iterates over Project folder</span>
 <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">data_path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Project folder path: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+
     <span class="c1"># Check if path leads to another folder</span>
     <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
+        
         <span class="c1"># In case the condition is met, iterate over the new path</span>
         <span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()):</span>
             <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Dataset folder path: &#39;</span><span class="p">,</span> <span class="n">file_path</span><span class="p">)</span>
@@ -503,42 +507,70 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Project folder path: 
- ..\..\data\Folder_Structures\Project2_Omero_like\Control
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Control\A9 p10d.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Control\A9 p5d.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Control\A9 p7d.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Control\A9 p9d.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Control\Readme.txt
+ ..\..\..\data\Folder_Structures\Project2_Omero_like\Control
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Control\A9 p10d.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Control\A9 p5d.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Control\A9 p7d.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Control\A9 p9d.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Control\Readme.txt
 Project folder path: 
- ..\..\data\Folder_Structures\Project2_Omero_like\Group1
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0006_D_1UL.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0007_D_1UL.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0011_D_1UL.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0013_D_1UL.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0014_D_1UL.tif
-Dataset folder path:  ..\..\data\Folder_Structures\Project2_Omero_like\Group1\Readme.txt
+ ..\..\..\data\Folder_Structures\Project2_Omero_like\Group1
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0006_D_1UL.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0007_D_1UL.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0011_D_1UL.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0013_D_1UL.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Group1\17P1_POS0014_D_1UL.tif
+Dataset folder path:  ..\..\..\data\Folder_Structures\Project2_Omero_like\Group1\Readme.txt
 Project folder path: 
- ..\..\data\Folder_Structures\Project2_Omero_like\Readme.txt
+ ..\..\..\data\Folder_Structures\Project2_Omero_like\Readme.txt
 </pre></div>
 </div>
 </div>
 </div>
-<p>As usual, to filter out files that are not images, we can add extra conditions. We also store paths from different folders in separated lists by checking the path <code class="docutils literal notranslate"><span class="pre">stem</span></code> (the final path component, without its suffix).</p>
+<p>As usual, to filter out files that are not images, we can add extra conditions and use <code class="docutils literal notranslate"><span class="pre">.glob</span></code> for specific file formats. We also store paths from different folders in separated lists by checking the path <code class="docutils literal notranslate"><span class="pre">stem</span></code> (the final path component, without its suffix).</p>
+<p>Example:</p>
+<ul class="simple">
+<li><p>if a variable <code class="docutils literal notranslate"><span class="pre">file_path</span></code> contains <code class="docutils literal notranslate"><span class="pre">Path('..\..\..\data\Folder_Structures\Project2_Omero_like\Readme.txt')</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_path.stem</span></code> yields <code class="docutils literal notranslate"><span class="pre">'Readme'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">file_path.suffix</span></code> yields <code class="docutils literal notranslate"><span class="pre">'.txt'</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>Check this out below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;..\..\..\data\Folder_Structures\Project2_Omero_like\Readme.txt&#39;</span><span class="p">)</span>
+<span class="n">file_path</span><span class="o">.</span><span class="n">stem</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Readme&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now back to the folder iteration, we collect file paths that lead to <code class="docutils literal notranslate"><span class="pre">.tif</span></code> files and store them in 2 <code class="docutils literal notranslate"><span class="pre">lists</span></code>, depending if they are in the <code class="docutils literal notranslate"><span class="pre">'Control'</span></code> folder or in the <code class="docutils literal notranslate"><span class="pre">'Group1'</span></code> folder.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">image_path_list_control</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">image_path_list_group1</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">data_path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
     
+    <span class="c1"># Check if path leads to another folder</span>
     <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">is_dir</span><span class="p">():</span>
         
-        <span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">iterdir</span><span class="p">()):</span>
-            <span class="c1"># Check if file is image (ends with .tif) and if current folder name is &#39;Control&#39;</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">file_path</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.tif&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="o">==</span> <span class="s1">&#39;Control&#39;</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">file_path</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;*.tif&#39;</span><span class="p">)):</span>
+            
+            <span class="c1"># Check if current folder name is &#39;Control&#39;</span>
+            <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="o">==</span> <span class="s1">&#39;Control&#39;</span><span class="p">:</span>
+                <span class="c1"># Store file path in control list</span>
                 <span class="n">image_path_list_control</span> <span class="o">+=</span> <span class="p">[</span><span class="n">file_path</span><span class="p">]</span>
                 
-            <span class="c1"># Check if file is image (ends with .tif) and if current folder name is &#39;Group1&#39;</span>
-            <span class="k">elif</span> <span class="p">(</span><span class="n">file_path</span><span class="o">.</span><span class="n">suffix</span> <span class="o">==</span> <span class="s1">&#39;.tif&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="o">==</span> <span class="s1">&#39;Group1&#39;</span><span class="p">):</span>
+            <span class="c1"># Check if current folder name is &#39;Group1&#39;</span>
+            <span class="k">elif</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="o">==</span> <span class="s1">&#39;Group1&#39;</span><span class="p">:</span>
+                <span class="c1"># Store file path in group1 list</span>
                 <span class="n">image_path_list_group1</span> <span class="o">+=</span> <span class="p">[</span><span class="n">file_path</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -551,10 +583,10 @@ Project folder path:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Control/A9 p10d.tif&#39;),
- WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Control/A9 p5d.tif&#39;),
- WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Control/A9 p7d.tif&#39;),
- WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Control/A9 p9d.tif&#39;)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Control/A9 p10d.tif&#39;),
+ WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Control/A9 p5d.tif&#39;),
+ WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Control/A9 p7d.tif&#39;),
+ WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Control/A9 p9d.tif&#39;)]
 </pre></div>
 </div>
 </div>
@@ -566,11 +598,11 @@ Project folder path:
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0006_D_1UL.tif&#39;),
- WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0007_D_1UL.tif&#39;),
- WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0011_D_1UL.tif&#39;),
- WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0013_D_1UL.tif&#39;),
- WindowsPath(&#39;../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0014_D_1UL.tif&#39;)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0006_D_1UL.tif&#39;),
+ WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0007_D_1UL.tif&#39;),
+ WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0011_D_1UL.tif&#39;),
+ WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0013_D_1UL.tif&#39;),
+ WindowsPath(&#39;../../../data/Folder_Structures/Project2_Omero_like/Group1/17P1_POS0014_D_1UL.tif&#39;)]
 </pre></div>
 </div>
 </div>
@@ -603,14 +635,14 @@ Project folder path:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_folder3</span> <span class="o">=</span> <span class="s1">&#39;..\..\data\Folder_Structures\Project3_Machine_Learning_style&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_folder3</span> <span class="o">=</span> <span class="s1">&#39;../../../data/Folder_Structures/Project3_Machine_Learning_style&#39;</span>
 <span class="n">data_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">data_folder3</span><span class="p">)</span>
 <span class="n">data_path</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WindowsPath(&#39;../../data/Folder_Structures/Project3_Machine_Learning_style&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WindowsPath(&#39;../../../data/Folder_Structures/Project3_Machine_Learning_style&#39;)
 </pre></div>
 </div>
 </div>
@@ -618,7 +650,7 @@ Project folder path:
 </section>
 <section id="exercise">
 <h2>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h2>
-<p>Iterate over this image repository and store each type of image path (raw, label and annotation) in a different list.</p>
+<p>Iterate over <code class="docutils literal notranslate"><span class="pre">Project3_Machine_Learning_style</span></code> and store each type of image path (raw, label and annotation) in a different list.</p>
 <p>In another cell, display the first image from each list.</p>
 </section>
 </section>
