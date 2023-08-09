@@ -13,9 +13,9 @@ We will explore [Napari](https://napari.org) for interactive image data analysis
 Before the course starts, all partcipants are required to have Napari and Jupyter installed, [please see the course preparation page](https://librehub.github.io/napari-LatAm-workshop-2023/day0/pre-requirements/to_be_installed.html) - and make use of the [napari chatroom for troubleshooting](https://napari.zulipchat.com/#narrow/stream/393209-napari-latam-workshop-2023/) if you face installation issues. The session on Python environments is further more in the inverted classroom format, so we kindly ask that you familiarise yourself with the [dedicated teaching material on environments](https://hackmd.io/@talley/SJB_lObBi#Python-environments-workshop) before the session in order to simply use the given time for questions.
 
 
-## Timetable (subject to adjustments)
+## Timetable
 
-All following times are in Chilean (Santiago) time. [Look up your related time here](https://timezonewizard.com/tn-75s), so you don't miss anything.
+All following times are in Chilean (Santiago) time (currently GMT-4). [Look up your related time here](https://timezonewizard.com/tn-75s), so you don't miss anything.
 
 <style>
 .markdown-table {width:100%;}
@@ -48,17 +48,19 @@ All following times are in Chilean (Santiago) time. [Look up your related time h
 | <div class="special">Time (Chile)</div>     | <div class="special">Activities / Topics</div> | <div class="special">Presenters</div> | <div class="special">Support</div> |
 | -------------    |:-------------:| -----:|-----:|
 | 10:30 - 11:00 | Questions from the last day? | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) | Tobias Wenzel,  <br>Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
-| 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) | Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez|
+| 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) <br>[slides](https://github.com/LIBREhub/napari-LatAm-workshop-2023/raw/main/docs/day2/1_File_paths/File_paths.pdf) | Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez|
 | 12.00 – 14.00 | Introduction to Image Analysis (Presentation) | [Rocco D'Antuono](https://twitter.com/RogerDAntuono) <br>[slides](https://drive.google.com/file/d/1BNkMPtYxnyANF1srXI6B6P-J_torzDiS/view?usp=sharing)| – |
 | 14:00 - 16:00 | Lunch Break | | |
 | 16.00 – 19.00 | napari/Python Training: <br>• Filters (Smoothing, Edge detection) <br>• Segmentation, Thresholding, Labelling and Measurement | [Juan Nunez-Iglesias](https://twitter.com/jnuneziglesias) | Adan Guerrero Cardenas,  <br>Daniel Althviz Moré |
 
-
 </div>
 
-On the third and last day, there are showcase seminars of key napari plugins as well as emerging trends to controll your bioimaging hardware with python libraries
+If you run the exercises in your own time and questions arise, please ask on [https://forum.image.sc/](https://forum.image.sc/).
+
 
 ### Day 3 - Friday the 11th of August 2023 (open to all on [Zoom](https://zoom.us/j/91498853978?pwd=M0hYek5MczlVZXg2VWQ0U2pid0l0UT09) )
+
+On the third and last day, there are showcase seminars of key napari plugins as well as emerging trends to controll your bioimaging hardware with python libraries.
 
 <div class="markdown-table">
 
