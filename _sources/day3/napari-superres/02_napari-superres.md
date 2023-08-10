@@ -45,7 +45,7 @@ For details check: https://napari.org/stable/
 
 
 
-You can install the plugin graphically following the detailed [user guide.](https://github.com/LIBREhub/napari-LatAm-Workshop-2023/blob/napari-superres/docs/day3/napari-superres/user guide.pdf).
+You can install the plugin graphically following the detailed [user guide.](https://github.com/LIBREhub/napari-LatAm-workshop-2023/blob/main/docs/day3/napari-superres/user%20guide.pdf)
 
 or install latest development version :
 
