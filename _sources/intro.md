@@ -2,14 +2,14 @@
 
 A first Latin America workshop #LIBREhub @napari #LABI - Latin America Bioimaging #MexicoBioimaging
 
-This [Jupyter book](https://jupyterbook.org/) contains training resources for scientists who want to dive into image processing with Python and Napari. 
+This [Jupyter book](https://jupyterbook.org/) contains training resources for scientists who want to dive into image processing with Python and Napari.
 It specifically aims for scientists and students working with microscopy images in the life sciences.
-We presume the attendees have some basic python programming and image analysis knowledge. 
+We presume the attendees have some basic python programming and image analysis knowledge.
 To get everyone on the same level, we start with Python programming basics.
 We will process images using [numpy](https://numpy.org), [scipy](https://www.scipy.org/), [scikit-image](https://scikit-image.org/), [SimpleITK](https://simpleitk.org/) and [clEsperanto](https://github.com/clEsperanto/pyclesperanto_prototype).
-We will explore [Napari](https://napari.org) for interactive image data analysis and the [Napari-Assistant](https://github.com/haesleinhuepf/napari-assistant) for generating [Jupyter Notebooks](https://jupyterlab.readthedocs.io/en/stable/) from interactively designed image processing workflows. 
+We will explore [Napari](https://napari.org) for interactive image data analysis and the [Napari-Assistant](https://github.com/haesleinhuepf/napari-assistant) for generating [Jupyter Notebooks](https://jupyterlab.readthedocs.io/en/stable/) from interactively designed image processing workflows.
 
-**Note:** 
+**Note:**
 Before the course starts, all partcipants are required to have Napari and Jupyter installed, [please see the course preparation page](https://librehub.github.io/napari-LatAm-workshop-2023/day0/pre-requirements/to_be_installed.html) - and make use of the [napari chatroom for troubleshooting](https://napari.zulipchat.com/#narrow/stream/393209-napari-latam-workshop-2023/) if you face installation issues. The session on Python environments is further more in the inverted classroom format, so we kindly ask that you familiarise yourself with the [dedicated teaching material on environments](https://hackmd.io/@talley/SJB_lObBi#Python-environments-workshop) before the session in order to simply use the given time for questions.
 
 
@@ -38,7 +38,7 @@ All following times are in Chilean (Santiago) time (currently GMT-4). [Look up y
 | 13.00 – 14.55 | Introduction to napari and the napari Assistant <br>Exercise: Export workflow to jupyter notebooks | [Robert Haase](https://twitter.com/haesleinhuepf)  <br>[slides pptx](https://f1000research.com/slides/12-937), [PDF](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day1/1_introduction_to_napari/Intro_napari.pdf) | Marcelo Zoccoler |
 | 15.10 – 16.30 | •	Pitfalls when working with Jupyter notebooks <br>•	Basic types in python <br>•	Lists and tuples <br>• Cropping lists <br>• Cropping images | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) <br>[slides1](https://github.com/LIBREhub/napari-LatAm-workshop-2023/raw/main/docs/day1/3_Python_Introduction/Python_basics.pdf), [slides2](https://github.com/LIBREhub/napari-LatAm-workshop-2023/raw/main/docs/day1/3_Python_Introduction/Python_data_structures.pdf)| [Adan Guerrero Cardenas](https://twitter.com/AdanGue1),  <br>[Pierre Padilla Huamantico](https://twitter.com/biodotpe),  <br>[Guillermo Sahonero Alvarez](https://www.linkedin.com/in/guillermosahonero/?originalSubdomain=bo),  <br>Jorge Gonzalez |
 | 16.30 – 17.30 | •	Masking numpy arrays <br>•	Dictionaries <br>•	Conditions <br>• Loops <br>• Functions | [Melissa Weber Mendonça](https://twitter.com/melissawm) | Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
-    
+
 </div>
 
 ### Day 2 - Wednesday the 9th of August 2023
@@ -72,7 +72,7 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 08:50 – 9:30 | Napari Clusters Plotter (Unsupervised machine learning) | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) |
 | 09:30 - 10:00 | Break | |
 | 10.10 – 11.00 | Napari Zelda (3D segmentation) | [Rocco D'Antuono](https://twitter.com/RogerDAntuono) |
-| 11.00 – 12.00 | Napari Superres (Superresolution) | Julian Mejia |
+| 11.00 – 12.00 | Napari Superres (Superresolution) | [Julian Mejia](https://www.linkedin.com/in/juli%C3%A1n-mej%C3%ADa-ph-d-601055ab/) |
 | 12:00 - 12:40 | Napari real time processing | [Lucien Hinderling](https://twitter.com/lhinderling) |
 | 12:40 - 14:00 | Lunch Break | |
 | 14:00 - 15:00 | Python libraries for microscope control | [Talley Lambert](https://twitter.com/TalleyJLambert) |
@@ -111,9 +111,5 @@ Alternatively, open a thread on [image.sc](https://image.sc).
 
 ## Acknowledgements
 
-This course was held virtually at the [Institute for Biological and Medical Engineering, Universidad Católica de Chile](https://ingenieriabiologicaymedica.uc.cl/en/) in August 2023 as part of the [LIBRE hub project](https://librehub.github.io/). We would like to thank all online contributors and speakers for their support and the [Chan Zuckerberg Initiative](https://chanzuckerberg.com/imaging/latin-american-hub-for-bioimaging-through-open-hardware/) for financial support through the [LIBRE hub project](https://librehub.github.io/). 
+This course was held virtually at the [Institute for Biological and Medical Engineering, Universidad Católica de Chile](https://ingenieriabiologicaymedica.uc.cl/en/) in August 2023 as part of the [LIBRE hub project](https://librehub.github.io/). We would like to thank all online contributors and speakers for their support and the [Chan Zuckerberg Initiative](https://chanzuckerberg.com/imaging/latin-american-hub-for-bioimaging-through-open-hardware/) for financial support through the [LIBRE hub project](https://librehub.github.io/).
 We would like to thank all the people who shared teaching materials we are reusing here, in particular from an [EPFL copurse last year](https://github.com/BiAPoL/Image-data-science-with-Napari-and-Python-LatAm2023) and individual contributors including Marcelo Leomil Zoccoler, Tobias Wenzel, Juan Nunez-Iglesias, Rocco D'Antuono, Melissa Weber Mendonça, Talley Lambert, Julián Mejía, Adan O. Guerrero Cardenas, and Robert Haase.
-
-
-
-
