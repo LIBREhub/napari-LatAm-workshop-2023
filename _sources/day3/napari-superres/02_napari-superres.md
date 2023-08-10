@@ -54,6 +54,9 @@ or install latest development version :
 You might need to install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) first.
 
 
+Also a [yml](https://github.com/LIBREhub/napari-LatAm-workshop-2023/blob/main/docs/day3/napari-superres/napari-superres.yml) file is available.
+
+
 ----------------------------------
 Examples of use:
 
