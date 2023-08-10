@@ -72,7 +72,7 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 08:50 – 9:30 | Napari Clusters Plotter (Unsupervised machine learning) | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) |
 | 09:30 - 10:00 | Break | |
 | 10.10 – 11.00 | Napari Zelda (3D segmentation) | [Rocco D'Antuono](https://twitter.com/RogerDAntuono) |
-| 11.00 – 12.00 | Napari Superres (Superresolution) | [Julian Mejia](https://www.linkedin.com/in/juli%C3%A1n-mej%C3%ADa-ph-d-601055ab/) |
+| 11.00 – 12.00 | Napari Superres (Superresolution) | [Julián Mejía](https://www.linkedin.com/in/juli%C3%A1n-mej%C3%ADa-ph-d-601055ab/) |
 | 12:00 - 12:40 | Napari real time processing | [Lucien Hinderling](https://twitter.com/lhinderling) |
 | 12:40 - 14:00 | Lunch Break | |
 | 14:00 - 15:00 | Python libraries for microscope control | [Talley Lambert](https://twitter.com/TalleyJLambert) |
