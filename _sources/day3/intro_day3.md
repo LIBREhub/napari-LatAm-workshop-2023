@@ -25,6 +25,5 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 12:00 - 12:40 | Napari real time processing | [Lucien Hinderling](https://twitter.com/lhinderling) |
 | 12:40 - 14:00 | Lunch Break | |
 | 14:00 - 15:00 | Python libraries for microscope control | [Talley Lambert](https://twitter.com/TalleyJLambert) |
-| 14:00 - 15:40 | SpatialData interactive omics analsyis | [Tim Treis](https://twitter.com/TreisTim) |
 
 </div>
