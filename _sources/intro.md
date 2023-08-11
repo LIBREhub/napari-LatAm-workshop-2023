@@ -58,7 +58,7 @@ All following times are in Chilean (Santiago) time (currently GMT-4). [Look up y
 If you run the exercises in your own time and questions arise, please ask on [https://forum.image.sc/](https://forum.image.sc/).
 
 
-### Day 3 - Friday the 11th of August 2023 (open to all on [Zoom](https://zoom.us/j/91498853978?pwd=M0hYek5MczlVZXg2VWQ0U2pid0l0UT09) )
+### Day 3 - Friday the 11th of August 2023 (open to all [here on Zoom](https://zoom.us/j/91498853978?pwd=M0hYek5MczlVZXg2VWQ0U2pid0l0UT09) )
 
 On the third and last day, there are showcase seminars of key napari plugins as well as emerging trends to controll your bioimaging hardware with python libraries.
 
@@ -76,6 +76,7 @@ On the third and last day, there are showcase seminars of key napari plugins as 
 | 12:00 - 12:40 | Napari real time processing | [Lucien Hinderling](https://twitter.com/lhinderling) |
 | 12:40 - 14:00 | Lunch Break | |
 | 14:00 - 15:00 | Python libraries for microscope control | [Talley Lambert](https://twitter.com/TalleyJLambert) |
+| 14:00 - 15:40 | SpatialData interactive omics analsyis | [Tim Treis](https://twitter.com/TreisTim)) |
 
 </div>
 
