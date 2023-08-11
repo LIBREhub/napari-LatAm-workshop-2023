@@ -22,7 +22,7 @@ This section is divided in 2 parts:
 <hr>
 
 ## More on <b>napari-zelda</b>:
-<b>Repository:</b> [https://github.com/RoccoDAnt/napari-zelda](https://github.com/RoccoDAnt/napari-zelda
+<b>Repository:</b> https://github.com/RoccoDAnt/napari-zelda
 
 ## ZELDA: a 3D Image Segmentation and Parent-Child relation plugin for microscopy image analysis in napari
 #### Authors: Rocco D'Antuono, Giuseppina Pisignano
