@@ -17,6 +17,7 @@ This section is divided in 2 parts:
   - <b>Installation instructions:</b> https://github.com/RoccoDAnt/napari-zelda
     - napari GUI: Plugins -> Install/Uninstall Package(s)
     - use prepared environment: _[np-zelda.yml](https://github.com/LIBREhub/napari-LatAm-workshop-2023/blob/main/docs/day3/napari-zelda/np-zelda.yml)_
+    
       _conda env create -f np-zelda. yml_
 
 <hr>
