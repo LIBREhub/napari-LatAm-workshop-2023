@@ -33,6 +33,10 @@ Repositories available:
 
 ----------------------------------
 
+Sample [dataset](https://github.com/LIBREhub/napari-LatAm-workshop-2023/tree/main/docs/day3/napari-superres/napari-workshop-dataset) 
+
+----------------------------------
+
 ## Installation
 First install napari viewer (if you haven't):
 
