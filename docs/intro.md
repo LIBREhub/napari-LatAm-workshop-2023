@@ -49,7 +49,7 @@ All following times are in Chilean (Santiago) time (currently GMT-4). [Look up y
 | -------------    |:-------------:| -----:|-----:|
 | 10:30 - 11:00 | Questions from the last day? | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) | Tobias Wenzel,  <br>Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez |
 | 11.00 – 12.00 | Python advanced folder management with loops <br>• Open proprietary file formats | [Marcelo Zoccoler](https://twitter.com/zoccolermarcelo) <br>[slides](https://github.com/LIBREhub/napari-LatAm-workshop-2023/raw/main/docs/day2/1_File_paths/File_paths.pdf) | Adan Guerrero Cardenas,  <br>Pierre Padilla Huamantico,  <br>Guillermo Sahonero Alvarez,  <br>Jorge Gonzalez|
-| 12.00 – 14.00 | Introduction to Image Analysis (Presentation) | [Rocco D'Antuono](https://twitter.com/RogerDAntuono) <br>[slides](https://drive.google.com/file/d/1BNkMPtYxnyANF1srXI6B6P-J_torzDiS/view?usp=sharing)| – |
+| 12.00 – 14.00 | Tips for open source image analysis | [Rocco D'Antuono](https://twitter.com/RogerDAntuono) <br>[slides](https://drive.google.com/file/d/1BNkMPtYxnyANF1srXI6B6P-J_torzDiS/view?usp=sharing)| – |
 | 14:00 - 16:00 | Lunch Break | | |
 | 16.00 – 19.00 | napari/Python Training: <br>• Filters (Smoothing, Edge detection) <br>• Segmentation, Thresholding, Labelling and Measurement | [Juan Nunez-Iglesias](https://twitter.com/jnuneziglesias) | Adan Guerrero Cardenas,  <br>Daniel Althviz Moré |
 
